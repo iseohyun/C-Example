@@ -1,0 +1,4 @@
+기타 : 
+	alignas, alignof, export, constexpr
+	asm, compl, explicit, mutable,
+	thread_local, static_assert, typeid, decltype

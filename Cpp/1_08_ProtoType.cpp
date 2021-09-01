@@ -9,14 +9,26 @@ using namespace std;
 // 
 
 class A;	// 프로토타입
-class B { public: A* a; };
-class A { public: int ID; };
+class B {
+public: A* a;
+	  B(A* aa) { a = aa; }
+};
+//class B2 { public: A a; };
+
+class A {
+public:
+	int ID;
+	B b = B(this);
+};
 
 void main()
 {
 	A a;
-	B b;
-	b.a = &a;
+	B b(&a);
+
 	b.a->ID = 99;
-	cout << b.a->ID << endl;
+	cout << a.ID << endl;
+
+	a.b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->ID = 55;
+	cout << a.ID << endl;
 }

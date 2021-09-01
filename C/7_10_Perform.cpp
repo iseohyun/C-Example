@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+
 #define A 100
 #define B 200
 #define TIMES 100000000
@@ -47,7 +48,6 @@ void checkTime(void (*ptr)(int, int)) {
     result = ((double)end - start);
     printf("%f\n", result);
 }
-
 
 int main() {
     void (*ptr)(int, int);

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <CppStyle_NameSpaceEx.h>
+#include <NameSpaceEx.h>
 using namespace std;
 
 // * namespace *

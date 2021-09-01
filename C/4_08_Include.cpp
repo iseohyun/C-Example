@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "Func_inc.h"
 
+/*
+**** Func_inc.h파일과, Func_inc.cpp파일을 해당파일에 복사하세요.
+* 
 // * include *
 // 외부 파일을 불러올 때, 쓰이는 명령어 입니다.
 // 본격적으로 컴파일을 하기 전에 실행하는 명령어이기 때문에,
@@ -12,8 +15,9 @@
 //		#include "파일경로\파일명.h"
 // 주의 : c의 경우, 추가 라이브러리 등록 작업이 필요합니다.
 //		cpp의 경우 헤더(.h)를 포함하면, 자동으로 cpp를 검색하도록 합니다.
+*/
 
-void main()
+void funcInc()
 {
-	funcInc();
+	printf("외부파일에서 호출\n");
 }
