@@ -33,13 +33,13 @@
                     +----+
 */
 
-#Define PIN_INPUT 3
+#define PIN_INPUT 3
 #define PIN_LED 13
 
 void setup() {
     Serial.begin(9600);
 
-    pinMode(PIN_INPUT, INPUT_PULLUP);
+    pinMode(PIN_INPUT, INPUT_PULLUP); //INPUT
     pinMode(PIN_LED, OUTPUT);
 }
 

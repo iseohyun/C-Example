@@ -13,6 +13,7 @@ void setup() {
 
 void loop() {
 	byte brightness = analogRead(A0);
-	Serial.write(brightness);
+	Serial.println(String(brightness));
 	analogWrite(PIN_LED, brightness);
+	delay(10);
 }
