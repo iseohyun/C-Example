@@ -48,12 +48,12 @@ int main()
 	pb2->show();
 
 	// dynamic_cast
-	B* pa = new B(10, 100);
-	A* pb = dynamic_cast<A*>(pa);	// downcast (B->A)
+	B* pb3 = new B(10, 100);
+	A* pa3 = dynamic_cast<A*>(pa);	// downcast (B->A)
 	pb->show();
 	cout << endl;
 
-	A* pa2 = new A(20);
+	A* pa4 = new A(20);
 	//B* pb2 = dynamic_cast<B*>(pa2); // upcast(A->B), Error
 	pb2->show();
 }

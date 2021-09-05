@@ -6,12 +6,12 @@ using namespace std;
 
 class Parents {
 public:
-	string str = "Parents^.^)/";
+	string str = "Parents";
 };
 
 class Children : public Parents {
 public:
-	string str = "Children^_^)a";
+	string str = "Children";
 	string getStr() {
 		return __super::str;
 	}

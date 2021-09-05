@@ -10,7 +10,7 @@ using namespace std;
 
 class Parents {
 private:
-	string str = "Parents^.^)/";
+	string str = "Parents";
 public:
 	void printStr() {
 		cout << str << endl;
@@ -19,7 +19,7 @@ public:
 
 class Children : public Parents {
 private:
-	string str = "Children^_^)a";
+	string str = "Children";
 public:
 	void printStr() {
 		cout << str << endl;

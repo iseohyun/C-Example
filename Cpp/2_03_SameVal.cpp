@@ -6,18 +6,19 @@ using namespace std;
 
 class Parents {
 public:
-	string str = "Parents^.^)/";
+	string str = "Parents";
 };
 
 class Children : public Parents {
 public:
-	string str = "Children^_^)a";
+	string str = "Children";
 };
 
 void main()
 {
-	Parents Par01;
+	Parents par01;
 	Children chi01;
 
-	cout << chi01.str << endl << Par01.str << endl;
+	cout << "str from " << chi01.str << endl;
+	cout << "str from " << par01.str << endl;
 }

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Func_inc.h"
+#include <include.h>
 
 /*
 **** Func_inc.h파일과, Func_inc.cpp파일을 해당파일에 복사하세요.
@@ -17,7 +17,6 @@
 //		cpp의 경우 헤더(.h)를 포함하면, 자동으로 cpp를 검색하도록 합니다.
 */
 
-void funcInc()
-{
-	printf("외부파일에서 호출\n");
+void main() {
+	OuterFunc();
 }

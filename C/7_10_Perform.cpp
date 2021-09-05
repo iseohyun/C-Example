@@ -52,6 +52,7 @@ void checkTime(void (*ptr)(int, int)) {
 int main() {
     void (*ptr)(int, int);
 
+    printf("성능 체크 중...\n");
     ptr = func1;
     checkTime(ptr);
 

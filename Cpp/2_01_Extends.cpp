@@ -9,17 +9,18 @@ using namespace std;
 
 class Parents {
 public:
-	string str = "Parents^.^)/";
+	string str = "Parents";
 };
 
 class Children : public Parents {
 public:
-	string str2 = "Children^_^)a";
+	string str2 = "Children";
 };
 
 void main()
 {
 	Children chi01;
 
-	cout << chi01.str << " " << chi01.str2 << endl;
+	cout << "str  from " << chi01.str << endl;
+	cout << "str2 from " << chi01.str2 << endl;
 }
