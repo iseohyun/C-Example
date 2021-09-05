@@ -1,3 +1,6 @@
+/*
+* 문) 결과를 예측하세요.
+*/
 #include <stdio.h>
 
 void main()

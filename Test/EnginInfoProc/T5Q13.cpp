@@ -19,11 +19,11 @@ void bubble_sort(int* list)
 		}
 	}
 	for (i = 0; i < SIZE; i++)
-		printf("%d ", /*****/ list[i]);
+		printf("%d ", /**1**/);
 }
 
 void main()
 {
 	int list[SIZE] = { 7, 2, 4, 1 };
-	/*****/bubble_sort(list);
+	/**2**/;
 }

@@ -38,17 +38,17 @@ void stackEmpty()
 }
 
 void push(int item)
-{									// 전역 stack에 item을 삽입
-	if (top >=/*?????*/max_stack_size)
+{	// 전역 stack에 item을 삽입
+	if (top >=/*??1??*/)
 		stackFull();
 	else
-		stack[++top] =/*?????*/item;
+		stack[++top] =/*??2??*/;
 }
 
 int pop()
-{		// 전역 stack의 최상위 원소를 삭제하고 반환
-	if (top <= /*?????*/-1)
+{	// 전역 stack의 최상위 원소를 삭제하고 반환
+	if (top <= /*??3??*/)
 		stackEmpty();
 	else
-		return stack[/*?????*/top--];
+		return stack[/*??4??*/];
 }

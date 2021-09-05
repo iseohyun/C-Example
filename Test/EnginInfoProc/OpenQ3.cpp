@@ -1,3 +1,7 @@
+/*
+*  문 : 출력 결과를 예상하십시오.
+*/
+
 #include <stdio.h>
 
 void main()

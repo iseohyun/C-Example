@@ -1,3 +1,6 @@
+/*
+* ¹®) ºóÄ­À» Ã¤¿ì½Ê½Ã¿À
+*/
 #include <stdio.h>
 
 void main()
@@ -10,8 +13,8 @@ void main()
 
 	while (input)
 	{
-		output += /*****/input % 10;
-		input /= /*****/10;
+		output += /**1**/;
+		input /= /**2**/;
 	}
 
 	printf("ÀÚ¸´¼ö ÇÕ°è : %d\n", output);

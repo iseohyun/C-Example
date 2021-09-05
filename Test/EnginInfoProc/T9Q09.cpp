@@ -1,3 +1,6 @@
+/*
+* ¹®) ºóÄ­À» Ã¤¿ì¼¼¿ä
+*/
 #include <stdio.h>
 
 void main()
@@ -8,8 +11,8 @@ void main()
 	scanf_s("%d", &input);
 	while (input)
 	{
-		output += /**1***/input % 10;
-		input /= /**2***/10;
+		output += /**1***/;
+		input /= /**2***/;
 		printf("ÀÚ¸´¼ö ÇÕ°è : % d\n", output);
 	}
 }
