@@ -9,6 +9,9 @@
 #define XXX(x) x+1
 #define MIN(x,y) (x>y?y:x)
 #define log(x)	printf("LOG(%d)\t: %s",__LINE__, x)
+#define out(x)	printf(#x " = %d\n", x)
+#define Aout(x, n)	printf(#x "[%d] = %d\n", n, x[n])
+
 
 void main()
 {
@@ -22,4 +25,12 @@ void main()
 	//NeverChange++;
 	log("Const를 이용한 출력\n");
 	printf("Never\t: %d\n", NeverChange);
+	out(NeverChange);
+
+	int a[10];
+	for (int i = 0; i < 10; i++) {
+		a[i] = i;
+		//out(a[i]);
+		Aout(a, i);
+	}
 }
