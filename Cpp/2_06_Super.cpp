@@ -17,7 +17,7 @@ public:
 	}
 };
 
-void main()
+int main()
 {
 	Children chi01;
 

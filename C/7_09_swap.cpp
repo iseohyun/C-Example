@@ -4,7 +4,7 @@
 * a와 b를 서로 교환하는 방법입니다.
 */
 
-void main()
+int main()
 {
 	int a = 100, b = 200;
 

@@ -20,10 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Cpp\4_05_Namespace.cpp" />
-    <ClCompile Include="NameSpaceEx.cpp" />
+    <ClCompile Include="..\..\..\Cpp\NameSpaceEx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NameSpaceEx.h" />
+    <ClInclude Include="..\..\..\Cpp\NameSpaceEx.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

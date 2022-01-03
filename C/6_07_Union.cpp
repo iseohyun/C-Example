@@ -14,16 +14,16 @@ typedef union {
 	int i;
 }U1;
 
-void main()
+int main()
 {
 	U1 u1;
 
 	u1.c[0] = 0x12;
 	u1.c[1] = 0x34;
 	u1.c[2] = 0x56;
-	u1.c[3] = 0xAB;
+	u1.c[3] = 0x7B;
 
-	printf("%d\n", sizeof(u1));
+	printf("%d\n", (int)sizeof(u1));
 	printf("%x, %x\n", u1.s[0], u1.s[1]);
 	printf("%x\n", u1.i);
 }

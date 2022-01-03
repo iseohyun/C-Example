@@ -17,7 +17,7 @@ public:
 	void showID() { cout << "ID:" << ID << endl; }
 };
 
-void main()
+int main()
 {
 	A a, b, c;
 	a << 11;

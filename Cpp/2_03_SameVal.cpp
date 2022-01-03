@@ -14,7 +14,7 @@ public:
 	string str = "Children";
 };
 
-void main()
+int main()
 {
 	Parents par01;
 	Children chi01;

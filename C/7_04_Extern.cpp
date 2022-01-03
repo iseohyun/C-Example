@@ -1,7 +1,5 @@
 #include <stdio.h>
-/*
-* extern.obj를 추가하세요.
-*/
+
 // * extern *
 // 개발을 하다보면, 내가 열심히 개발한 코드를 공유해야 할 때도 있고,
 // 남이 개발한 코드를 공유받을 때도 있습니다.
@@ -10,23 +8,18 @@
 // 해당 코드를 직접 참조 할 수 없을 때, extern을 이용하여 빌드에러를 회피 할 수 있습니다.
 // 물론 컴파일이 된 후에, 각각의 코드를 짜집기 할 때(링크라고 합니다), 완성된 코드를 만들게 됩니다.
 
-extern void exFunc();
-extern int exVar;
+extern void fnStaticLib();
+extern int plus10(int x);
 
-void main()
+int main()
 {
-	exFunc();
-	printf("%d\n", exVar);
-	exVar++;
-	printf("%d\n", exVar);
+	fnStaticLib();
+	printf("%d\n", plus10(10));
 }
 
-/* extern.obj
-#include<stdio.h>
-
-int exVar = 100;
-
-void exFunc() {
-	printf("외부 라이브러리 함수\n");
-}
+/* 
+실습과제 : 
+	StaticLib 프로젝트에 minus7 함수를 추가하고, 빌드합니다.
+	minus7함수를 만듭니다.
+	
 */

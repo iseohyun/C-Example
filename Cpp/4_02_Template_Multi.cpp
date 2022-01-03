@@ -13,7 +13,7 @@ void func(T& a, U& b) {
 int main()
 {
 	int a = 3;
-	float b = 3.3;
+	float b = 3.3f;
 	func(a, b);
 	cout << "a : " << a << ", b : " << b << endl;
 

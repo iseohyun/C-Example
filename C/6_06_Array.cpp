@@ -8,7 +8,7 @@ typedef struct {
 	int j;
 }STR1;
 
-void main()
+int main()
 {
 	STR1 str1[10];
 

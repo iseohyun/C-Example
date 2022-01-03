@@ -17,11 +17,11 @@ public: A* a;
 
 class A {
 public:
-	int ID;
+	int ID = 0;
 	B b = B(this);
 };
 
-void main()
+int main()
 {
 	A a;
 	B b(&a);

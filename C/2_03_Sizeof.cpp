@@ -5,19 +5,23 @@
 // 문법은 다음과 같습니다.
 //		sizeof(알고자 하는 변수 또는 타입)
 
-void main()
+int main()
 {
 	char c;
 	unsigned char uc;
 	int i;
 	unsigned int ui;
+	long l;
+	long long ll;
 	float f;
 	double d;
 
-	printf("char\t\t: %d / %d\n", sizeof(c), sizeof(char));
-	printf("unsigned char\t: %d\n", sizeof(uc));
-	printf("int\t\t: %d\n", sizeof(i));
-	printf("unsinged int\t: %d\n", sizeof(ui));
-	printf("float\t\t: %d\n", sizeof(f));
-	printf("double\t\t: %d\n", sizeof(d));
+	printf("char\t\t: %llu / %llu\n", sizeof(c), sizeof(char));
+	printf("unsigned char\t: %llu\n", sizeof(uc));
+	printf("int\t\t: %llu\n", sizeof(i));
+	printf("unsinged int\t: %llu\n", sizeof(ui));
+	printf("long\t\t: %llu\n", sizeof(l));
+	printf("long long\t: %llu\n", sizeof(ll));
+	printf("float\t\t: %llu\n", sizeof(f));
+	printf("double\t\t: %llu\n", sizeof(d));
 }

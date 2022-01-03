@@ -10,7 +10,7 @@ void func(int i)
 	printf("%d\n", i);	// 55 ¹Ý¿µÇÔ
 }
 
-void main()
+int main()
 {
 	int i = 4;
 

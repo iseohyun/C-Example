@@ -20,7 +20,7 @@ typedef struct {
 int getSpd(void* my);
 void setSpd(void* my, int a);
 
-void main()
+int main()
 {
 	CLASS car;
 	car.getSpeed = getSpd;

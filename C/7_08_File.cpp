@@ -15,7 +15,7 @@
 // 위의 모드를 조합해서 사용할 수 있습니다.
 //	> wx, rb, wb, wbx, ab, r+, w+, w+x, a+, r+b, rb+, a+b, ab+, w+bx, wb+x
 
-void main()
+int main()
 {
 	//FILE* pFile = fopen("example.txt", "a+");
 	FILE* pFile;

@@ -15,7 +15,7 @@ public:
 	void showX(A& a) { printf("%d\n", a.x); }
 };
 
-void main()
+int main()
 {
 	A a;
 	B b;

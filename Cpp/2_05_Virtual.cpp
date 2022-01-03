@@ -30,7 +30,7 @@ public:
 	}
 };
 
-void main()
+int main()
 {
 	Children chi01;
 	Parents* pPar;

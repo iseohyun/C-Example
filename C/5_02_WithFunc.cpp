@@ -5,17 +5,21 @@
 // 따라서, 함수로 반환을 받아야 하는 번거로움이 사라집니다.
 // 게다가, 반환받은 함수를 저장해야하는 번거로움이 사라집니다.
 
-void func(int a, int* b)
+void func(int a, int* b, int& c)
 {
 	a = a + 10;
 	*b = *b + 10;
+	c = c + 10;
 }
 
-void main()
+int main()
 {
-	int x = 11, y = 12;
-	printf("(x, y) = (%d, %d)\n", x, y);
+	int x = 11, y = 12, z = 13;
+	printf("(x, y, z) = (%d, %d, %d)\n", x, y, z);
 
-	func(x, &y);
-	printf("(x, y) = (%d, %d)\n", x, y);
+	func(x, &y, z);
+	printf("(x, y, z) = (%d, %d, %d)\n", x, y, z);
+
+	func(x, &y, z);
+	printf("(x, y, z) = (%d, %d, %d)\n", x, y, z);
 }

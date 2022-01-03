@@ -23,7 +23,7 @@ public:		int pu;
 	  }
 };
 
-void main()
+int main()
 {
 	A a;
 

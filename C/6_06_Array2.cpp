@@ -19,7 +19,7 @@ typedef struct
 void printFood(FOOD st);
 void printFoodAll(FOOD*, int);
 
-void main()
+int main()
 {
 	FOOD food[] =
 	{

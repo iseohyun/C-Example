@@ -21,13 +21,16 @@ int func3(bool mode) {
     Resource r(3);
     if (mode)
         throw runtime_error("Exception from 3!\n");
+    return 0;
 }
+
 int func2(bool mode) {
     Resource r(2);
     func3(mode);
     cout << "func2 ½ÇÇà µÊ!" << endl;
     return 0;
 }
+
 int func1(bool mode) {
     Resource r(1);
     func2(mode);

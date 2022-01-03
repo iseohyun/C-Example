@@ -8,7 +8,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-void main()
+int main()
 {
 	// math.h를 이용한 수학계산
 	printf("절대값\t|-7|\t: %d\n", abs(-7));

@@ -15,7 +15,7 @@ void A::setA(int x) {	// 전달인자(x)와 멤버변수(x)가 이름이 같습니다.
 	this->x = x;
 }
 
-void main()
+int main()
 {
 	A a;
 	a.setA(25);

@@ -31,6 +31,6 @@ typedef struct {
 int main()
 {
 	char A[3];
-	printf("%d/%d\n", sizeof(A), sizeof(DATE));
-	printf("%d/%d\n", sizeof(DATE2), sizeof(DATE3));
+	printf("%llu/%llu\n", sizeof(A), sizeof(DATE));
+	printf("%llu/%llu\n", sizeof(DATE2), sizeof(DATE3));
 }

@@ -19,7 +19,7 @@
 //	\r		: 캐리지 리턴
 //	\t		: 탭(Tab)
 
-void main()
+int main()
 {
 	// 문자 출력
 	printf("> 문자 출력 예제\n");
@@ -35,7 +35,7 @@ void main()
 
 	// 정수, 소수
 	printf("\n> 소수 출력 예제\n");
-	printf("%d\n", 3.3);
+	printf("%d\n", 3.3);	// 소수를 정수로 출력할 수 없습니다. 의도하지 않은 숫자가 출력됩니다.
 	printf("%f\n", 3.3);
 	printf("%e\n\n", 3.3);
 }

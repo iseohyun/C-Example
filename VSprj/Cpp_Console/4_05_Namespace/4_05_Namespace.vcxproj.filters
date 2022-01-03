@@ -18,13 +18,13 @@
     <ClCompile Include="..\..\..\Cpp\4_05_Namespace.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="NameSpaceEx.cpp">
+    <ClCompile Include="..\..\..\Cpp\NameSpaceEx.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NameSpaceEx.h">
-      <Filter>소스 파일</Filter>
+    <ClInclude Include="..\..\..\Cpp\NameSpaceEx.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

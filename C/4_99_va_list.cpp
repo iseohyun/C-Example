@@ -17,7 +17,6 @@
 int myFunc(int size, ...)
 {
     int _Result = 0;
-    int* p;
 
     va_list vl;
     va_start(vl, size);
@@ -28,7 +27,7 @@ int myFunc(int size, ...)
     return _Result;
 }
 
-void main()
+int main()
 {
     printf("%d\n", myFunc(5, 1, 2, 3, 4, 5));
 

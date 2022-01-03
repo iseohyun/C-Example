@@ -12,7 +12,7 @@
 
 #define PREPROCESS
 
-void main()
+int main()
 {
 #ifdef PREPROCESS
 	printf("Preprocess defined.\n");

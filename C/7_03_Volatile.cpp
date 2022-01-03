@@ -7,7 +7,7 @@
 // 읽기가 시도 될 때마다, 해당 변수를 읽어와야 합니다.
 // 이때 사용되는 키워드가 volatile입니다.
 
-void main()
+int main()
 {
 	volatile int sensor = 1;
 

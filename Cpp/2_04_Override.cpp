@@ -26,7 +26,7 @@ public:
 	}
 };
 
-void main()
+int main()
 {
 	Parents par01;
 	Children chi01;

@@ -22,7 +22,10 @@
     <ClCompile Include="..\..\..\C\7_04_Extern.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Object Include="..\..\..\C\extern.obj" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\x64\Debug\StaticLib.lib" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

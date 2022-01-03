@@ -42,7 +42,7 @@ void show(double a, int b, char c)
 	printf("Factor : %lf, %d, %c\n", a, b, c);
 }
 
-void main()
+int main()
 {
 	show();
 	show(10);
@@ -52,3 +52,15 @@ void main()
 	show(9.8, 20);
 	show(1.414, 30, 'C');
 }
+
+/*
+실습과제 1:
+	sum함수를 제작합니다. x + y를 수행합니다.
+
+실습과제 2:
+	sum함수를 제작합니다. x + y + z를 수행합니다.
+
+실습과제 3:
+	sum함수를 제작합니다. 정수 + 소수를 수행합니다.
+	예를들어 2 + 2.5를 수행합니다.
+*/

@@ -9,38 +9,58 @@
 // 당연히 주소(포인터)이기 때문에, 연산중에 반영된 내용이 최종 변수에 영향을 미칩니다.
 // 배열은 포인터의 일종입니다.
 
-void func01(int a, int b, int c);
-void func02(int A[]);
+void print(int A[], int size);
 
-void main()
+int main()
 {
-	// 배열을 사용하지 않는 경우
-	int a, b, c;
-
-	a = 1;
-	b = 2;
-	c = 3;
-
-	printf("실행 전 : %d, %d, %d\n", a, b, c);
-	func01(a, b, c);
-	printf("실행 후 : %d, %d, %d\n\n", a, b, c);
-
 	int A[3];	// 배열을 선언하는 방법
 	A[0] = 10;	// 배열을 사용(저장)하는 방법
 	A[1] = 20;
 	A[2] = 30;
 
-	printf("실행 전 : %d, %d, %d\n", A[0], A[1], A[2]);
-	func02(A);
-	printf("실행 후 : %d, %d, %d\n\n", A[0], A[1], A[2]);
+	print(A, 3);
+	
 }
 
-void func01(int a, int b, int c) {
-	a++; b++; c++;
-}
-
-void func02(int A[3]) {
-	for (int i = 0; i < 3; i++) {
-		A[i]++;
+void print(int A[], int size) {
+	for (int i = 0; i < size; i++) {
+		printf("%d ", A[i]);
 	}
+	printf("\n");
+}
+
+/*
+실습과제 1:
+	10개짜리 배열을 만듭니다.
+	1부터, 10까지 숫자를 저장합니다.
+	저장한 숫자를 확인합니다.
+
+실습과제 2:
+	문자 배열을 만듭니다.
+		char str[10] = {"String"};
+
+	아래 문자열을 한 글자씩 띄어서 출력하세요.
+		예) S t r i n g
+
+실습과제 3:
+	문자열이 모두 대문자로 출력하세요.
+		예)STRING
+
+실습과제 4:
+	암호를 만듭니다. 각 글자는 1글자씩 다음 글자를 출력합니다.
+	예를들어,
+		hello -> ifmmp
+		be nice -> cf ojdf
+
+실습과제 5:
+	복호화 함수도 만듭니다.
+
+실습과제 6:
+	문자(26)+숫자(10)+사이띄기를 섞어 37가지 문자를 치환하는 방법을 개발해 봅니다.
+	치환 방법이 모음 유추공격에 약한 이유를 알아봅니다.
+
+*/
+
+void print(int A[], int size)
+{
 }

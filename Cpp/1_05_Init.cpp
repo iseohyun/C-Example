@@ -14,7 +14,7 @@ public:
 	void showID() { printf("ID:%d\n", ID); }
 };
 
-void main()
+int main()
 {
 	A a;
 	A b(33);

@@ -15,7 +15,7 @@ public:
 	~A() { printf("%d ¼Ò¸ê\n", ID); }
 };
 
-void main()
+int main()
 {
 	A a10(10);
 	{

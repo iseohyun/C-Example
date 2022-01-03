@@ -28,7 +28,10 @@ int func(int c) {
         throw runtime_error("runtime");
     case 7:
         throw underflow_error("underflow");
+    default:
+        break;
     }
+    return 0;
 }
 
 int main() {

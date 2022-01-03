@@ -14,7 +14,7 @@
 // 동적할당은 반드시 해제가 일어날 수 있도록 신경써 줍시다.
 // 
 
-void main()
+int main()
 {
 	char input[MAX_SIZE] = { 0, };
 	int szArr = MAX_SIZE;

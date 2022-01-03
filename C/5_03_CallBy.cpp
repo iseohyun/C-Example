@@ -10,7 +10,7 @@ void callbyRef(int*);
 void callbyValue(int);
 void callByAddr(int&);
 
-void main()
+int main()
 {
 	int i = 100, j = 200, k = 300;
 	int* p = &j;

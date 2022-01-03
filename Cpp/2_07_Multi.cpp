@@ -18,7 +18,7 @@ class C : public B {};
 class D : public A {};
 class E : public C, D {};	// 다중 상속
 
-void main()
+int main()
 {
 	E e;
 	//e.showA();

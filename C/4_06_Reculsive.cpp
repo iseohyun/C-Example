@@ -16,7 +16,34 @@ int rSum(int s)
 	return s;
 }
 
-void main()
+int main()
 {
 	printf("resault : %d\n", rSum(10));
 }
+
+/*
+실습과제 :
+	아래 함수를 이용하여, 최대공약수 / 팩토리얼 / 피보나치 함수를 구현해 보세요.
+
+	static int func1(int n) {
+		if (n == 1)
+			return 1;
+		else
+			return n * func1(n - 1);
+	}
+
+	static int func2(int p, int q) {
+		if (q == 0)
+			return p;
+		else
+			return func2(q, p % q);
+
+	}
+
+	static int func3(int n) {
+		if (n < 2)
+			return n;
+		else
+			return func3(n - 1) + func3(n - 2);
+	}
+*/

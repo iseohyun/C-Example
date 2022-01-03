@@ -61,7 +61,7 @@ class Grand3 : public Child3 {
 	//void showPub() { pub(); } // ºÒ°¡´É
 };
 
-void main()
+int main()
 {
 	Child1 c1;
 	Child2 c2;

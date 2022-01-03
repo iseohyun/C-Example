@@ -10,7 +10,7 @@
 void func();
 void func02(int, int);	// 결과는 같습니다 : void func02(int a, int b);
 
-void main()
+int main()
 {
 	func();
 	func02(3, 5);
@@ -25,3 +25,14 @@ void func02(int a, int b)
 {
 	printf("function 02 : %d, %d\n", a, b);
 }
+
+/*
+실습과제 :
+	a 함수는 b함수를 호출 하고,
+	b 함수는 a함수를 호출 합니다.
+
+	a 함수가 호출될 때, "A 함수가 호출 되었습니다.(n번째)"를 출력합니다.
+	b 함수가 호출될 때, "B 함수가 호출 되었습니다."를 출력합니다.
+
+	a 함수가 10번 호출 되면 함수가 호출 되지 않습니다.
+*/

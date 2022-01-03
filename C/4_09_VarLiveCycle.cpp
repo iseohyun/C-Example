@@ -8,7 +8,7 @@
 
 int i = 9; // ù°
 
-void main()
+int main()
 {
 	printf("A: %d\n", i);
 

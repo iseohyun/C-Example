@@ -13,7 +13,7 @@
 #define Aout(x, n)	printf(#x "[%d] = %d\n", n, x[n])
 
 
-void main()
+int main()
 {
 	log("#define을 이용한 출력\n");
 	printf("ABC\t: %d\n", ABC);

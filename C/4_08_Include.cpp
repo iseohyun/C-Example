@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <include.h>
+#include "../VSprj/C_Console/4_08_Include/include.h"
 
 /*
 **** Func_inc.h파일과, Func_inc.cpp파일을 해당파일에 복사하세요.
@@ -17,6 +17,16 @@
 //		cpp의 경우 헤더(.h)를 포함하면, 자동으로 cpp를 검색하도록 합니다.
 */
 
-void main() {
+int main() {
 	OuterFunc();
 }
+
+/*
+실습과제 :
+	include.cpp 파일에 함수(max)를 만듭니다.
+	인자를 2개 받아서 큰 수를 출력하는 기능을 합니다.
+
+실습과제 2:
+	include2.cpp 파일을 새로 만듦니다.
+	min함수를 만들어서, 2개 인자 중 작은 수를 출력하는 기능을 합니다.
+*/

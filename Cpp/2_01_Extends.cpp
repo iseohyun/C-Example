@@ -17,7 +17,7 @@ public:
 	string str2 = "Children";
 };
 
-void main()
+int main()
 {
 	Children chi01;
 

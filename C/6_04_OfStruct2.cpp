@@ -21,10 +21,10 @@ struct ST_B {
 	ST_A2 st_a2;
 };
 
-void main()
+int main()
 {
 	ST_B st_b = { {1, 2}, {3, 4, 5} };
 	printf("st_b.st_a1[a1,a2] = %d, %d\n", st_b.st_a1.a1, st_b.st_a1.a2);
 	printf("st_b.st_a1[a1,a2, a3] = %d, %d, %d\n", st_b.st_a2.a1, st_b.st_a2.a2, st_b.st_a2.a3);
-	printf("SizeOf [B:%d / A1:%d / A2:%d]\n", sizeof(st_b), sizeof(st_b.st_a1), sizeof(st_b.st_a2));
+	printf("SizeOf [B:%llu / A1:%llu / A2:%llu]\n", sizeof(st_b), sizeof(st_b.st_a1), sizeof(st_b.st_a2));
 }
