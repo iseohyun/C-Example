@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 // * 산술연산 *
+// 
+// 강의자료 : https://example-code.tistory.com/entry/%EC%97%B0%EC%82%B0%EC%9E%90
+// 
 // 기본적인 사친연산에, 나머지 연산(%)이 추가되었습니다.
 // 나머지 연산은 ..으로 나눈 나머지를 반환합니다.
 
