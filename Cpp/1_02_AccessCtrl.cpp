@@ -1,4 +1,6 @@
-#include <stdio.h>
+using namespace std;
+#include <iostream>
+#include <string>
 
 // * class *
 //	접근 제어자의 역할은 중요한 제어변수를 외부 인터페이스(조작)으로부터 보호하는 역할을 합니다.
@@ -8,30 +10,28 @@
 //	만약 pv에 들어가야 하는 변수가 반드시 0 < pv < 10이라면 setPv어떻게 제어하시겠습니까?
 //
 
-class A {
-private:	int pv;
-protected:	int pt;
-public:		int pu;
-	  void setPt(int newPt) {
-		  pt = newPt;
-	  }
-	  void setPv(int newPv) {
-		  pv = newPv;
-	  }
-	  void showAll() {
-		  printf("pv:%d, pt:%d, pu:%d", pv, pt, pu);
-	  }
+class Human {
+private:
+	string name;
+public:
+	string getName() {
+		return name;
+	}
+
+	void setName(string newName) {
+		name = newName;
+	}
 };
 
-int main()
+void main()
 {
-	A a;
+	Human my;
 
-	a.pu = 1;
-	//a.pv = 2;
-	//a.pt = 3;
-	a.setPt(2);
-	a.setPv(3);
+	//my.name = "머글"; // 접근이 되지 않기 때문에 에러가 발생
 
-	a.showAll();
+	cout << "Name : " << my.getName() << endl;
+
+	my.setName("호빗");
+
+	cout << "New Name : " << my.getName() << endl;
 }

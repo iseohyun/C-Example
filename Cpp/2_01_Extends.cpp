@@ -1,5 +1,6 @@
-#include <iostream>
 using namespace std;
+#include <iostream>
+#include <string>
 
 // * 상속 *
 // 부모로 부터 상속받은 기능을 그대로 사용할 수 있습니다.
@@ -7,20 +8,35 @@ using namespace std;
 // 문법은 다음과 같습니다.
 //		class 자식클래스 : 접근제어자 부모클래스 { }
 
-class Parents {
+class Human {
+protected:
+	string name;
 public:
-	string str = "Parents";
+	Human() {}
+	Human(string name) {
+		this->name = name;
+	}
+	string act() {
+		return name;
+	}
 };
 
-class Children : public Parents {
+class Wizard : public Human {
+private:
+	string magic;
 public:
-	string str2 = "Children";
+	Wizard(string name, string magic) {
+		this->name = name;
+		this->magic = magic;
+	}
+	string spell() {
+		return magic;
+	}
 };
 
 int main()
 {
-	Children chi01;
+	Wizard me("법사", "화이어볼");
 
-	cout << "str  from " << chi01.str << endl;
-	cout << "str2 from " << chi01.str2 << endl;
+	cout << me.act() << " > " << me.spell() << endl;
 }

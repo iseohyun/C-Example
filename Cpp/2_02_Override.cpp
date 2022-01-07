@@ -1,5 +1,6 @@
-#include <iostream>
 using namespace std;
+#include <iostream>
+#include <string>
 
 // * Override *
 // 상속에서 기억해야 할 가장 중요한 기능입니다.
@@ -8,29 +9,35 @@ using namespace std;
 // 너무 많은 기능은 코드를 사용/재사용하는데 걸림돌이 됩니다.
 // 따라서, 이름이 같은 함수를 재정의 함으로써, 기능 향상을 노리는 것을 Overriding이라고 합니다.
 
-class Parents {
-private:
-	string str = "Parents";
+class Human {
+protected:
+	string name;
 public:
-	void printStr() {
-		cout << str << endl;
+	Human() {}
+	Human(string name) {
+		this->name = name;
+	}
+	string act() {
+		return name;
 	}
 };
 
-class Children : public Parents {
+class Wizard : public Human {
 private:
-	string str = "Children";
+	string name = "법사";
+	string magic;
 public:
-	void printStr() {
-		cout << str << endl;
+	Wizard(string magic) {
+		this->magic = magic;
+	}
+	string act() {
+		return name + " > " + magic;
 	}
 };
 
 int main()
 {
-	Parents par01;
-	Children chi01;
+	Wizard me("화이어볼");
 
-	par01.printStr();
-	chi01.printStr();
+	cout << me.act() << endl;
 }

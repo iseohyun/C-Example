@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Cpp\1_08_ProtoType.cpp">
+    <ClCompile Include="..\..\..\Cpp\1_07_ProtoType.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

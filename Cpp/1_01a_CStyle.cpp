@@ -1,3 +1,6 @@
+using namespace std;
+#include <iostream>
+#include <string>
 #include <stdio.h>
 
 // * class *
@@ -12,32 +15,31 @@
 // 속도라는 특성이 있겠지만, 속도가 빨라지라든지, 현재 속도를 알려달라는 명령을 어떻게 한데 담을 수 있을까요?
 
 typedef struct {
-	int speed;
-	int (*getSpeed)(void*);
-	void (*setSpeed)(void*, int);
-}CLASS;
+	string name;
+	string (*getName)(void*);
+	void (*setName)(void*, string);
+}HUMAN;
 
-int getSpd(void* my);
-void setSpd(void* my, int a);
+string getName(void* my);
+void setName(void* my, string a);
 
 int main()
 {
-	CLASS car;
-	car.getSpeed = getSpd;
-	car.setSpeed = setSpd;
+	HUMAN my;
+	my.getName = getName;
+	my.setName = setName;
 
-	// 자동차의 속력은 50이라고 알려줍니다.
-	car.speed = 50;
-	printf("Speed : %d\n", car.getSpeed(&car)); // 자동차야, 현재 속도를 알려줄래?
+	my.name = "머글";
+	printf("Name : %s\n", my.getName(&my).c_str());
 
-	car.setSpeed(&car, 100);	// 자동차야, 현재 속도를 100으로 변경해줘~
-	printf("Speed : %d\n", car.getSpeed(&car));
+	my.setName(&my, "호빗");
+	printf("New Name : %s\n", my.getName(&my).c_str());
 }
 
-int getSpd(void* my) {
-	return ((CLASS*)my)->speed;
+string getName(void* my) {
+	return ((HUMAN*)my)->name;
 }
 
-void setSpd(void* my, int a) {
-	((CLASS*)my)->speed = a;
+void setName(void* my, string a) {
+	((HUMAN*)my)->name = a;
 }

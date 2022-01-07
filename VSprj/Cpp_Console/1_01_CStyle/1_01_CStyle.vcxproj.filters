@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Cpp\1_01_CStyle.cpp">
+    <ClCompile Include="..\..\..\Cpp\1_01a_CStyle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
