@@ -29,34 +29,34 @@ int func(int c) {
     case 7:
         throw underflow_error("underflow");
     default:
+        c =  c / 0;
         break;
     }
     return 0;
 }
 
 int main() {
-    for (int i = 1; i <= 7; i++) {
-        try {
-            printf(" > %d : ", i);
-            func(i);
-        }
-        catch (domain_error e) {
-            cout << "(D) " << e.what() << endl;
-        }
-        catch (logic_error e) {
-            cout << "(L) " << e.what() << endl;
-        }
-        catch (overflow_error e) {
-            cout << "(OV) " << e.what() << endl;
-        }
-        catch (underflow_error e) {
-            cout << "(UD) " << e.what() << endl;
-        }
-        catch (range_error e) {
-            cout << "(R) " << e.what() << endl;
-        }
-        catch (...) {
-            cout << "Default Error" << endl;
-        }
-    }
+	try {
+		int i = 10;
+		printf(" > %d : ", i);
+		func(i);
+	}
+	catch (domain_error e) {
+		cout << "(D) " << e.what() << endl;
+	}
+	catch (logic_error e) {
+		cout << "(L) " << e.what() << endl;
+	}
+	catch (overflow_error e) {
+		cout << "(OV) " << e.what() << endl;
+	}
+	catch (underflow_error e) {
+		cout << "(UD) " << e.what() << endl;
+	}
+	catch (range_error e) {
+		cout << "(R) " << e.what() << endl;
+	}
+	catch (...) {
+		cout << "Default Error" << endl;
+	}
 }

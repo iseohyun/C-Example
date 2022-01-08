@@ -6,7 +6,7 @@ using namespace std;
 //		class A;	<- 프로토타입
 //		class B { A a; };
 //		class A {};
-// 
+// 주의 : 클래스 안에서는 프로토 타입으로 사용할 수 있지만, main함수보다는 위에 있어야 합니다.
 
 class A;	// 프로토타입
 class B {

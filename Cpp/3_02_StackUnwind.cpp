@@ -10,8 +10,12 @@ using namespace std;
 
 class Resource {
 public:
-    Resource(int id) : id_(id) {}
-    ~Resource() { cout << "府家胶 秦力 : " << id_ << endl; }
+    Resource(int id) : id_(id) {
+        cout << "府家胶 且寸 : " << id << endl;
+    }
+    ~Resource() {
+        cout << "府家胶 秦力 : " << id_ << endl;
+    }
 
 private:
     int id_;
@@ -27,14 +31,12 @@ int func3(bool mode) {
 int func2(bool mode) {
     Resource r(2);
     func3(mode);
-    cout << "func2 角青 凳!" << endl;
     return 0;
 }
 
 int func1(bool mode) {
     Resource r(1);
     func2(mode);
-    cout << "func1 角青 凳!" << endl;
     return 0;
 }
 

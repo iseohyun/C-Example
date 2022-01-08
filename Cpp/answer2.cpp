@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../2_08b_text2/animal1.h"
+#include "animal1.h"
 using namespace std;
 
 class flyable {
