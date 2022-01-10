@@ -10,6 +10,7 @@
 // 배열은 포인터의 일종입니다.
 
 void print(int A[], int size);
+int return2();
 
 int main()
 {
@@ -20,6 +21,8 @@ int main()
 
 	print(A, 3);
 	
+	A[return2()] = return2();
+	printf("\n A[2] = %d", A[2]);
 }
 
 void print(int A[], int size) {
@@ -27,6 +30,10 @@ void print(int A[], int size) {
 		printf("%d ", A[i]);
 	}
 	printf("\n");
+}
+
+int return2() {
+	return 2;
 }
 
 /*
@@ -60,7 +67,3 @@ void print(int A[], int size) {
 	치환 방법이 모음 유추공격에 약한 이유를 알아봅니다.
 
 */
-
-void print(int A[], int size)
-{
-}
