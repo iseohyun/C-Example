@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Cpp\answer2.cpp" />
+    <ClCompile Include="..\..\..\Cpp\2_08b_answer2.cpp" />
     <ClCompile Include="2_08b_text2.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -18,7 +18,7 @@
     <ClCompile Include="2_08a_test1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Cpp\Answer1.cpp">
+    <ClCompile Include="..\..\..\Cpp\2_08a_Answer1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

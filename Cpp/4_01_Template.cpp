@@ -12,10 +12,6 @@ void Swap(T& a, T& b);
 template <>
 void Swap<double>(double&, double&);
 
-template<typename T> T makeDouble(T a) {
-	return a + a;
-}
-
 int main()
 {
 	int a = 3, b = 5;
@@ -29,12 +25,6 @@ int main()
 	double i = 3.14, j = 9.8;
 	Swap(i, j);
 	cout << "i : " << i << ", j : " << j << endl;
-	UnitX A1('A');
-	UnitX B1('B');
-	UnitX B2('B', 2);
-	
-	A1 = makeDouble(B1);
-	A1.show();
 }
 
 template <typename T>
@@ -57,10 +47,16 @@ void Swap<double>(double&, double&) {
 //		1.1 -> 2.2
 //		test -> testtest (string이용)
 
-// 실습과제2:
-//		실습과제 1에서 만든 템플릿을 이용하여 아래 Unit 클래스를 이용해서 연산을 해보자. 
-//			(메인함수보다 위에 있어야 합니다.)
+// 실습과제2: (4_01a_test1에서 작성하세요.)
+//		게임을 만드려고 합니다. 유닛은 레벨(lv)와 경험치(exp)를 가지고 있습니다.
+// 
+//		유닛 2개를 다음 함수(UnitMerge)를 이용하여 합칠 수 있습니다.
+//			합쳐지는 두 유닛의 경험치는 산술합(a+b)이고, 100을 넘어가면 레벨이 올라갑니다.
+//			만약 두 유닛의 lv이 같다고 하면, 높은 lv로 합쳐집니다.
 //
+//			template<typename T> T UnitMerge(T a) {
+//				return a + a;
+//			}
 
 class UnitX {
 public:
