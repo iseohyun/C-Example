@@ -34,7 +34,7 @@ int main()
 
 	if (pArr == NULL) {
 		printf("메모리의 동적 할당에 실패했습니다.\n");
-		return;
+		return false;
 	}
 
 	printf("\n>> 동적으로 할당받은 메모리의 초깃값\n");

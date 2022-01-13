@@ -53,15 +53,20 @@ int main() {
     void (*ptr)(int, int);
 
     printf("성능 체크 중...\n");
+
+    printf("Swap : XOR (메모리절약) = ");
     ptr = func1;
     checkTime(ptr);
 
+    printf("Swap (메모리사용) = ");
     ptr = func2;
     checkTime(ptr);
 
+    printf("Swap : XOR [Inline] = ");
     ptr = func3;
     checkTime(ptr);
 
+    printf("Swap [Inline] = ");
     ptr = func4;
     checkTime(ptr);
 }

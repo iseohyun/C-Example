@@ -115,13 +115,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_05_inline", "7_05_inline\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_06_Math", "7_06_Math\7_06_Math.vcxproj", "{E5F52EA4-3D28-4AE1-8B99-2D84969536B6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_07_Malloc", "7_07_Malloc\7_07_Malloc.vcxproj", "{D62F8475-31C6-4909-93A7-9327BFF6022F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_08_Malloc", "7_07_Malloc\7_07_Malloc.vcxproj", "{D62F8475-31C6-4909-93A7-9327BFF6022F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_08_File", "7_08_File\7_08_File.vcxproj", "{CBE5A79A-D79C-43DB-805B-7D3275070936}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_09_File", "7_08_File\7_08_File.vcxproj", "{CBE5A79A-D79C-43DB-805B-7D3275070936}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_09_swap", "7_09_swap\7_09_swap.vcxproj", "{4FEB59E4-6CE3-4099-928A-89068A7BF21F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_10_swap", "7_09_swap\7_09_swap.vcxproj", "{4FEB59E4-6CE3-4099-928A-89068A7BF21F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_10_Perform", "7_10_Perform\7_10_Perform.vcxproj", "{76F9ECAA-3CAC-436F-97E5-85B07330E3E7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_10b_Perform", "7_10_Perform\7_10_Perform.vcxproj", "{76F9ECAA-3CAC-436F-97E5-85B07330E3E7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "0_Test", "0_Test\0_Test.vcxproj", "{36A63084-3F3D-4594-B429-24066B100C50}"
 EndProject
@@ -134,6 +134,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_01d_hangul", "2_01d_hangul\2_01d_hangul.vcxproj", "{6810700C-9457-433C-B9EC-5B576F55BD4D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_01e_Unicode", "2_01e_Unicode\2_01e_Unicode.vcxproj", "{86DE3767-8E4A-4682-A28A-CFFD202FFABB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7_07_Random", "7_07_Random\7_07_Random.vcxproj", "{EAF08779-89C1-46D7-AE57-A5FD800E7335}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -671,6 +673,14 @@ Global
 		{86DE3767-8E4A-4682-A28A-CFFD202FFABB}.Release|x64.Build.0 = Release|x64
 		{86DE3767-8E4A-4682-A28A-CFFD202FFABB}.Release|x86.ActiveCfg = Release|Win32
 		{86DE3767-8E4A-4682-A28A-CFFD202FFABB}.Release|x86.Build.0 = Release|Win32
+		{EAF08779-89C1-46D7-AE57-A5FD800E7335}.Debug|x64.ActiveCfg = Debug|x64
+		{EAF08779-89C1-46D7-AE57-A5FD800E7335}.Debug|x64.Build.0 = Debug|x64
+		{EAF08779-89C1-46D7-AE57-A5FD800E7335}.Debug|x86.ActiveCfg = Debug|Win32
+		{EAF08779-89C1-46D7-AE57-A5FD800E7335}.Debug|x86.Build.0 = Debug|Win32
+		{EAF08779-89C1-46D7-AE57-A5FD800E7335}.Release|x64.ActiveCfg = Release|x64
+		{EAF08779-89C1-46D7-AE57-A5FD800E7335}.Release|x64.Build.0 = Release|x64
+		{EAF08779-89C1-46D7-AE57-A5FD800E7335}.Release|x86.ActiveCfg = Release|Win32
+		{EAF08779-89C1-46D7-AE57-A5FD800E7335}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

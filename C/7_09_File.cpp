@@ -21,11 +21,11 @@ int main()
 	FILE* pFile;
 	char Buf[100];
 
-	fopen_s(&pFile, "log.txt", "a+");
+	fopen_s(&pFile, "d:\\log.txt", "a+");
 
 	if (pFile == NULL) {
 		puts("파일을 열 수가 없습니다!");
-		return;
+		return false;
 	}
 	else {
 		puts("파일을 성공적으로 열었습니다!");
@@ -36,7 +36,7 @@ int main()
 
 	if (fclose(pFile) != 0) {
 		puts("파일을 닫을 수가 없습니다!");
-		return;
+		return false;
 	}
 	else {
 		puts("파일을 성공적으로 닫았습니다!");

@@ -6,7 +6,6 @@
 // M_PI, M_E를 사용하기 위해서 #define이 필요합니다.
 #define _USE_MATH_DEFINES
 #include <math.h>
-#include <stdlib.h>
 
 int main()
 {
@@ -19,10 +18,4 @@ int main()
 	printf("지수\te^2\t: %lf\n", pow(M_E, 2));
 	printf("로그\tlog2(9)\t: %lf\n", log2(9));
 	printf("내림\tfloor()\t: %lf\n\n", floor(1.9));
-
-	// stdlib.h를 이용한 랜덤 10개 받아보기
-	printf("랜덤수 : ");
-	for (int i = 0; i < 10; i++) {
-		printf("%d, ", rand());
-	}
 }
