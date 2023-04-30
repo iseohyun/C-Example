@@ -1,27 +1,27 @@
-#include <stdio.h>
+// * ì €ì¥ê³µê°„ì˜ í¬ê¸° *
+// ê° ì €ì¥ê³µê°„ì˜ í¬ê¸°ë¥¼ í”„ë¡œê·¸ë¨ì„ í†µí•´ì„œ ì•Œì•„ë‚¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+// ë¬¸ë²•ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.
+//		sizeof(ì•Œê³ ì í•˜ëŠ” ë³€ìˆ˜ ë˜ëŠ” íƒ€ì…)
 
-// * ÀúÀå°ø°£ÀÇ Å©±â *
-// °¢ ÀúÀå°ø°£ÀÇ Å©±â¸¦ ÇÁ·Î±×·¥À» ÅëÇØ¼­ ¾Ë¾Æ³¾ ¼ö ÀÖ½À´Ï´Ù.
-// ¹®¹ıÀº ´ÙÀ½°ú °°½À´Ï´Ù.
-//		sizeof(¾Ë°íÀÚ ÇÏ´Â º¯¼ö ¶Ç´Â Å¸ÀÔ)
+#include <stdio.h>
 
 int main()
 {
-	char c;
-	unsigned char uc;
-	int i;
-	unsigned int ui;
-	long l;
-	long long ll;
-	float f;
-	double d;
+    char c;
+    unsigned char uc;
+    int i;
+    unsigned int ui;
+    long l;
+    long long ll;
+    float f;
+    double d;
 
-	printf("char\t\t: %llu / %llu\n", sizeof(c), sizeof(char));
-	printf("unsigned char\t: %llu\n", sizeof(uc));
-	printf("int\t\t: %llu\n", sizeof(i));
-	printf("unsinged int\t: %llu\n", sizeof(ui));
-	printf("long\t\t: %llu\n", sizeof(l));
-	printf("long long\t: %llu\n", sizeof(ll));
-	printf("float\t\t: %llu\n", sizeof(f));
-	printf("double\t\t: %llu\n", sizeof(d));
+    printf("char\t\t: %llu / %llu\n", sizeof(c), sizeof(char));
+    printf("unsigned char\t: %llu\n", sizeof(uc));
+    printf("int\t\t: %llu\n", sizeof(i));
+    printf("unsinged int\t: %llu\n", sizeof(ui));
+    printf("long\t\t: %llu\n", sizeof(l));
+    printf("long long\t: %llu\n", sizeof(ll));
+    printf("float\t\t: %llu\n", sizeof(f));
+    printf("double\t\t: %llu\n", sizeof(d));
 }

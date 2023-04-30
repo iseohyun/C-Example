@@ -1,26 +1,24 @@
-#include <stdio.h>
+// * ë¬¸ìžì™€ ìˆ«ìž *
+// ë¬¸ìžì™€ ìˆ«ìžì˜ ì¸ì‹ì˜ ê²½ê³„ë¥¼ ì—†ì• ëŠ” ê²ƒì´ ì¤‘ìš”.
 
-// * ¹®ÀÚ¿Í ¼ýÀÚ *
-// ¹®ÀÚ¿Í ¼ýÀÚÀÇ ÀÎ½ÄÀÇ °æ°è¸¦ ¾ø¾Ö´Â °ÍÀÌ Áß¿ä.
-// ¼ýÀÚ¸¦ ¾î¶»°Ô Ç¥ÇöÇÏ´Â°¡¿¡ µû¶ó¼­, 
-// ¼ýÀÚ°¡ µÇ±âµµ Çß´Ù°¡ ¹®ÀÚ°¡ µÇ±âµµ ÇÑ´Ù¶ó´Â ±ú´âÀ½ÀÌ ÇÊ¿ä
+#include <stdio.h>
 
 int main()
 {
-	printf("¼ýÀÚ·Î Ãâ·Â: %d\n", 0);
-	printf("¹®ÀÚ·Î Ãâ·Â: %c\n", 0);
-	printf("¼ýÀÚ·Î Ãâ·Â: %d\n", '0');
-	printf("¹®ÀÚ·Î Ãâ·Â: %c\n\n", '0');
+    printf("ìˆ«ìžë¡œ ì¶œë ¥: %d\n", 0);
+    printf("ë¬¸ìžë¡œ ì¶œë ¥: %c\n", 0);
+    printf("ìˆ«ìžë¡œ ì¶œë ¥: %d\n", '0');
+    printf("ë¬¸ìžë¡œ ì¶œë ¥: %c\n\n", '0');
 
-	printf("* ¾Æ½ºÅ° ¹®ÀÚ¸¦ ¸ðµÎ ÇÁ¸°Æ® ÇØ º¾´Ï´Ù.\n");
+    printf("* ì•„ìŠ¤í‚¤ ë¬¸ìžë¥¼ ëª¨ë‘ í”„ë¦°íŠ¸ í•´ ë´…ë‹ˆë‹¤.\n");
 
-	for (int i = 0; i < 128; i++)
-	{
-		for (int j = 0; i % 16; i++)
-		{
-			printf("%c", i);
-		}
-		printf("\n");
-	}
-	printf("\n");
+    for (int i = 0; i < 128; i++)
+    {
+        for (int j = 0; i % 16; i++)
+        {
+            printf("%c", i);
+        }
+        printf("\n");
+    }
+    printf("\n");
 }
