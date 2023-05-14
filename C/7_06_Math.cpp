@@ -1,21 +1,21 @@
+// * ìˆ˜í•™ê³„ì‚° *
+// ìì£¼ì‚¬ìš©í•˜ëŠ” í•¨ìˆ˜ì˜ ê²½ìš° ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µë˜ëŠ” ë¼ì´ë¸ŒëŸ¬ë¦¬ë¥¼ ì´ìš©í•˜ì—¬, ê°œë°œ íš¨ìœ¨ì„±ì„ íšê¸°ì ìœ¼ë¡œ ì˜¬ë¦´ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+
 #include <stdio.h>
 
-// * ¼öÇĞ°è»ê *
-// ÀÚÁÖ»ç¿ëÇÏ´Â ÇÔ¼öÀÇ °æ¿ì ±âº»ÀûÀ¸·Î Á¦°øµÇ´Â ¶óÀÌºê·¯¸®¸¦ ÀÌ¿ëÇÏ¿©, °³¹ß È¿À²¼ºÀ» È¹±âÀûÀ¸·Î ¿Ã¸± ¼ö ÀÖ½À´Ï´Ù.
-
-// M_PI, M_E¸¦ »ç¿ëÇÏ±â À§ÇØ¼­ #defineÀÌ ÇÊ¿äÇÕ´Ï´Ù.
+// M_PI, M_Eë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œ #defineì´ í•„ìš”í•©ë‹ˆë‹¤.
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 int main()
 {
-	// math.h¸¦ ÀÌ¿ëÇÑ ¼öÇĞ°è»ê
-	printf("Àı´ë°ª\t|-7|\t: %d\n", abs(-7));
-	printf("Á¦°ö±Ù\tRoot 5\t: %lf\n", sqrt(5));
-	printf("»ï°¢\tSin(30)\t: %lf\n", sin(30. / 180 * M_PI));
-	printf("¿ª»ï°¢\tCos-1\t: %lf\n", acos(0.5) / M_PI * 180);
-	printf("Exp\te^2\t: %lf\n", exp(2));
-	printf("Áö¼ö\te^2\t: %lf\n", pow(M_E, 2));
-	printf("·Î±×\tlog2(9)\t: %lf\n", log2(9));
-	printf("³»¸²\tfloor()\t: %lf\n\n", floor(1.9));
+    // math.hë¥¼ ì´ìš©í•œ ìˆ˜í•™ê³„ì‚°
+    printf("ì ˆëŒ€ê°’\t|-7|\t: %d\n", abs(-7));
+    printf("ì œê³±ê·¼\tRoot 5\t: %lf\n", sqrt(5));
+    printf("ì‚¼ê°\tSin(30)\t: %lf\n", sin(30. / 180 * M_PI));
+    printf("ì—­ì‚¼ê°\tCos-1\t: %lf\n", acos(0.5) / M_PI * 180);
+    printf("Exp\te^2\t: %lf\n", exp(2));
+    printf("ì§€ìˆ˜\te^2\t: %lf\n", pow(M_E, 2));
+    printf("ë¡œê·¸\tlog2(9)\t: %lf\n", log2(9));
+    printf("ë‚´ë¦¼\tfloor()\t: %lf\n\n", floor(1.9)); // ì˜¬ë¦¼: ceil, ë°˜ì˜¬ë¦¼: round
 }

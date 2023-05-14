@@ -2,32 +2,30 @@ using namespace std;
 #include <iostream>
 #include <string>
 
-// °­ÀÇÀÚ·á : https://example-code.tistory.com/entry/%ED%81%B4%EB%9E%98%EC%8A%A4
-
 class Human {
 public:
-	string name;
-	string getName();
-	void setName(string);
+    string name;
+    string getName();
+    void setName(string);
 };
 
 string Human::getName() {
-	return name;
+    return name;
 }
 
 void Human::setName(string newName) {
-	name = newName;
+    name = newName;
 }
 
-void main()
+int main()
 {
-	Human my;
+    Human my;
 
-	my.name = "¸Ó±Û";
+    my.name = "ë¨¸ê¸€";
 
-	cout << "Name : " << my.getName() << endl;
+    cout << "Name : " << my.getName() << endl;
 
-	my.setName("È£ºø");
+    my.setName("í˜¸ë¹—");
 
-	cout << "New Name : " << my.getName() << endl;
+    cout << "New Name : " << my.getName() << endl;
 }

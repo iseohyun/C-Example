@@ -1,36 +1,33 @@
+// * ì „ì²˜ë¦¬ê¸° *
+// #defineì€ ì „ì²˜ë¦¬ê¸°ì—ì„œ ì»´íŒŒì¼ì„ í•˜ê¸° ì „ì— í•´ë‹¹ìœ„ì¹˜ì— ê³ ëŒ€ë¡œ ë¶™ì—¬ë„£ê¸° í•˜ëŠ” íš¨ê³¼ê°€ ìˆìŠµë‹ˆë‹¤.
+// ì˜ ì´ìš©ë§Œ í•œë‹¤ë©´, ì½”ë“œê¸¸ì´ë¥¼ íšê¸°ì ìœ¼ë¡œ ì¤„ì¼ ìˆ˜ ë„ ìˆìŠµë‹ˆë‹¤.
+// ì—¬ëŸ¬ìœ„ì¹˜ë¥¼ ë™ì‹œì— ë³€ê²½í•´ì•¼ í•  ë•Œ, #defineë§Œ ìˆ˜ì •í•˜ì—¬ ë§¤ìš° íš¨ê³¼ì ìœ¼ë¡œ í•œêº¼ë²ˆì— ë³€ê²½ í•  ìˆ˜ë„ ìˆìŠµë‹ˆë‹¤.
+
 #include <stdio.h>
 
-// * ÀüÃ³¸®±â *
-// #defineÀº ÀüÃ³¸®±â¿¡¼­ ÄÄÆÄÀÏÀ» ÇÏ±â Àü¿¡ ÇØ´çÀ§Ä¡¿¡ °í´ë·Î ºÙ¿©³Ö±â ÇÏ´Â È¿°ú°¡ ÀÖ½À´Ï´Ù.
-// Àß ÀÌ¿ë¸¸ ÇÑ´Ù¸é, ÄÚµå±æÀÌ¸¦ È¹±âÀûÀ¸·Î ÁÙÀÏ ¼ö µµ ÀÖ½À´Ï´Ù.
-// ¿©·¯À§Ä¡¸¦ µ¿½Ã¿¡ º¯°æÇØ¾ß ÇÒ ¶§, #define¸¸ ¼öÁ¤ÇÏ¿© ¸Å¿ì È¿°úÀûÀ¸·Î ÇÑ²¨¹ø¿¡ º¯°æ ÇÒ ¼öµµ ÀÖ½À´Ï´Ù.
-
-#define ABC 10
-#define XXX(x) x+1
-#define MIN(x,y) (x>y?y:x)
-#define log(x)	printf("LOG(%d)\t: %s",__LINE__, x)
-#define out(x)	printf(#x " = %d\n", x)
-#define Aout(x, n)	printf(#x "[%d] = %d\n", n, x[n])
-
+#define GREETING "good morning"
+#define var(x) x + 1
+#define MIN(x, y) (x > y ? y : x)
+#define log(x) printf("LOG(%d)\t: %s", __LINE__, x)
+#define out(x) printf(#x " = %d\n", x)
+#define Aout(x, n) printf(#x "[%d] = %d\n", n, x[n])
 
 int main()
 {
-	log("#defineÀ» ÀÌ¿ëÇÑ Ãâ·Â\n");
-	printf("ABC\t: %d\n", ABC);
-	printf("XXX(3)\t: %d\n", XXX(3));
-	printf("MIN(3,4): %d\n", MIN(3, 4));
-	printf("MIN(5,4): %d\n\n", MIN(5, 4));
+    log("ë§¤í¬ë¡œ ì¶œë ¥\n");
+    printf("greeting : %s\n", GREETING);
+    printf("var(3) : %d\n", var(3));
+    printf("MIN(3,4): %d\n", MIN(3, 4));
+    printf("MIN(5,4): %d\n\n", MIN(5, 4));
 
-	const int NeverChange = 1;
-	//NeverChange++;
-	log("Const¸¦ ÀÌ¿ëÇÑ Ãâ·Â\n");
-	printf("Never\t: %d\n", NeverChange);
-	out(NeverChange);
+    const int constVar = 1;
+    out(constVar);
 
-	int a[10];
-	for (int i = 0; i < 10; i++) {
-		a[i] = i;
-		//out(a[i]);
-		Aout(a, i);
-	}
+    int a[5];
+    for (int i = 0; i < 5; i++)
+    {
+        a[i] = i;
+        // out(a[i]);
+        Aout(a, i);
+    }
 }

@@ -1,48 +1,48 @@
+// * Enum *
+// ì—´ê±°ì²´(Enum)ì€ 0ë¶€í„° ì‹œìž‘í•˜ì—¬, ìˆœì°¨ì ìœ¼ë¡œ ë²ˆí˜¸ë¥¼ ë¶€ì—¬í•©ë‹ˆë‹¤.
+// Enumì„ ì‚¬ìš©í•˜ëŠ” ì´ìœ ëŠ” ê°€ë…ì„±ë•Œë¬¸ìž…ë‹ˆë‹¤.
+// ì˜ˆë¥¼ë“¤ì–´, íƒ±í¬ ì–´í”Œì„ ë§Œë“¤ì—ˆë‹¤ê³  í•©ì‹œë‹¤. ì™¼ìª½ìœ¼ë¡œ ì´ë™ì€ ì½”ë“œ 3ì¸ë°
+// ì½”ë“œì— 3ì´ë¼ê³  ì¨ ë†“ìœ¼ë©´ ì´ê²ƒì´ ì™¼ìª½ì¸ì§€ ì˜¤ë¥¸ìª½ì¸ì§€, ì—…ë“œë ¤ì´ì¸ì§€ ì•Œ ìˆ˜ê°€ ì—†ìŠµë‹ˆë‹¤.
+// ë”°ë¼ì„œ, ì½”ë“œì— Enumì„ ì´ìš©í•˜ë©´ LEFTë¼ê³  ìž‘ì„±í•œë‹¤ë©´, ì½”ë“œ3ì„ ëª¨ë¥´ë”ë¼ë„ ì½”ë“œë¥¼ ì½ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+// 
+// ë‹¨, Enumì„ ì‚¬ìš©í•˜ì§€ ì•Šê³ , #defineì„ ì´ìš©í•´ì„œë„ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+// #defineì„ ì´ìš©í–ˆì„ ê²½ìš°,  ì¤‘ë³µì´ ê°€ëŠ¥í•˜ê³ , enumì€ (ê¸°ë³¸ì ìœ¼ë¡œ) ì¤‘ë³µì´ ë¶ˆê°€ëŠ¥í•˜ê¸° ë•Œë¬¸ì—,
+// í—¤ë”êµí™˜ì„ í†µí•œ ì˜ë¯¸(semantics)ì˜ êµí™˜ì´ ìˆ˜ì›”í•´ ì§‘ë‹ˆë‹¤.
+
 #include <stdio.h>
 
-// * Enum *
-// ¿­°ÅÃ¼(Enum)Àº 0ºÎÅÍ ½ÃÀÛÇÏ¿©, ¼øÂ÷ÀûÀ¸·Î ¹øÈ£¸¦ ºÎ¿©ÇÕ´Ï´Ù.
-// EnumÀ» »ç¿ëÇÏ´Â ÀÌÀ¯´Â °¡µ¶¼º¶§¹®ÀÔ´Ï´Ù.
-// ¿¹¸¦µé¾î, ÅÊÅ© ¾îÇÃÀ» ¸¸µé¾ú´Ù°í ÇÕ½Ã´Ù. ¿ÞÂÊÀ¸·Î ÀÌµ¿Àº ÄÚµå 3ÀÎµ¥
-// ÄÚµå¿¡ 3ÀÌ¶ó°í ½á ³õÀ¸¸é ÀÌ°ÍÀÌ ¿ÞÂÊÀÎÁö ¿À¸¥ÂÊÀÎÁö, ¾÷µå·Á½÷ÀÎÁö ¾Ë ¼ö°¡ ¾ø½À´Ï´Ù.
-// µû¶ó¼­, ÄÚµå¿¡ EnumÀ» ÀÌ¿ëÇÏ¸é LEFT¶ó°í ÀÛ¼ºÇÑ´Ù¸é, ÄÚµå3À» ¸ð¸£´õ¶óµµ ÄÚµå¸¦ ÀÐÀ» ¼ö ÀÖ½À´Ï´Ù.
-// 
-// ´Ü, EnumÀ» »ç¿ëÇÏÁö ¾Ê°í, #defineÀ» ÀÌ¿ëÇØ¼­µµ °¡´ÉÇÕ´Ï´Ù.
-// #defineÀ» ÀÌ¿ëÇßÀ» °æ¿ì,  Áßº¹ÀÌ °¡´ÉÇÏ°í, enumÀº (±âº»ÀûÀ¸·Î) Áßº¹ÀÌ ºÒ°¡´ÉÇÏ±â ¶§¹®¿¡,
-// Çì´õ±³È¯À» ÅëÇÑ ÀÇ¹Ì(semantics)ÀÇ ±³È¯ÀÌ ¼ö¿ùÇØ Áý´Ï´Ù.
-
 enum Color {
-	RED,
-	ORENGE,
-	YELLOW,
-	GREEN,
-	BLUE,
-	INDIGO,
-	PURPLE,
-	BLACK = 10
+    RED,
+    ORENGE,
+    YELLOW,
+    GREEN,
+    BLUE,
+    INDIGO,
+    PURPLE,
+    BLACK = 10
 };
 
 enum class CppStyle {
-	C_Style = 3,
-	Cpp_Style,
-	Cshop_Style
+    C_Style = 3,
+    Cpp_Style,
+    Cshop_Style
 };
 
 #define PINK 4
 
 int main()
 {
-	printf("RED    : %d\n", RED);
-	printf("YELLOW : %d\n", YELLOW);
-	printf("BLUE   : %d\n", BLUE);
-	printf("BLACK  : %d\n", BLACK);
-	printf("PINK   : %d\n\n", PINK);
+    printf("RED    : %d\n", RED);
+    printf("YELLOW : %d\n", YELLOW);
+    printf("BLUE   : %d\n", BLUE);
+    printf("BLACK  : %d\n", BLACK);
+    printf("PINK   : %d\n\n", PINK);
 
-	Color A = INDIGO;
-	printf("Color #1 : %d\n", A);
-	printf("Color #2 : %d\n\n", Color::GREEN);
+    Color A = INDIGO;
+    printf("Color #1 : %d\n", A);
+    printf("Color #2 : %d\n\n", Color::GREEN);
 
-	CppStyle style = CppStyle::Cpp_Style;
-	printf("Style #1 : %d\n", style);
-	printf("Style #2 : %d\n\n", CppStyle::C_Style);
+    CppStyle style = CppStyle::Cpp_Style;
+    printf("Style #1 : %d\n", style);
+    printf("Style #2 : %d\n\n", CppStyle::C_Style);
 }

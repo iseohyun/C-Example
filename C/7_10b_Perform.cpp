@@ -1,17 +1,17 @@
+/*
+* ì‹œìž‘ ì‹œê°„ê³¼ ëë‚˜ëŠ” ì‹œê°„ì„ ì¸¡ì •í•´ì„œ ì–¼ë§ˆë‚˜ ì„±ëŠ¥ì´ ì¢‹ì€ì§€ ì•Œ ìˆ˜ ìžˆë‹¤.
+* ì½”ë”©ì˜ ì •ì„ì€ (ëŒ€ì²´ë¡œ) ì—†ë‹¤. ìž˜ ì§œì—¬ì§„ ì½”ë“œë¼ í•¨ì€, ì •ìƒë™ìž‘ì„ í•˜ëŠ” ì½”ë“œê°€
+* ë¹ ë¥´ê³  ì½ê¸° ì‰½ê²Œ ì“°ì—¬ì ¸ì•¼ í•œë‹¤.
+* ì„±ëŠ¥ ì¸¡ì •ì€ ëŒ€ê²Œ ê°™ì€ ë™ìž‘ì„ ì—¬ëŸ¬ë²ˆ ë°˜ë³µì‹œí‚¤ëŠ”ë°, ê·¸ ì´ìœ ëŠ” ì»¨ë””ì…˜ì— ë”°ë¼ì„œ ë¹ ë¥´ê²Œ ì‹¤í–‰ë  ë•Œë„ ìžˆê³ , ëŠë¦¬ê²Œ ì‹¤í–‰ ë  ë•Œë„ ìžˆê¸° ë•Œë¬¸ì´ë‹¤.
+*
+*/
+
 #include <stdio.h>
 #include <time.h>
 
 #define A 100
 #define B 200
 #define TIMES 100000000
-
-/*
-* ½ÃÀÛ ½Ã°£°ú ³¡³ª´Â ½Ã°£À» ÃøÁ¤ÇØ¼­ ¾ó¸¶³ª ¼º´ÉÀÌ ÁÁÀºÁö ¾Ë ¼ö ÀÖ´Ù.
-* ÄÚµùÀÇ Á¤¼®Àº (´ëÃ¼·Î) ¾ø´Ù. Àß Â¥¿©Áø ÄÚµå¶ó ÇÔÀº, Á¤»óµ¿ÀÛÀ» ÇÏ´Â ÄÚµå°¡
-* ºü¸£°í ÀÐ±â ½±°Ô ¾²¿©Á®¾ß ÇÑ´Ù.
-* ¼º´É ÃøÁ¤Àº ´ë°Ô °°Àº µ¿ÀÛÀ» ¿©·¯¹ø ¹Ýº¹½ÃÅ°´Âµ¥, ±× ÀÌÀ¯´Â ÄÁµð¼Ç¿¡ µû¶ó¼­ ºü¸£°Ô ½ÇÇàµÉ ¶§µµ ÀÖ°í, ´À¸®°Ô ½ÇÇà µÉ ¶§µµ ÀÖ±â ¶§¹®ÀÌ´Ù.
-*
-*/
 
 void func1(int a, int b) {
     a ^= b;
@@ -40,33 +40,27 @@ inline void func4(int a, int b) {
 void checkTime(void (*ptr)(int, int)) {
     clock_t start, end;
     double result;
-    start = clock(); //½Ã°£ ÃøÁ¤ ½ÃÀÛ
+    start = clock(); //ì‹œê°„ ì¸¡ì • ì‹œìž‘
     for (int i = 0; i < TIMES; i++) {
         ptr(A, B);
     }
-    end = clock(); //½Ã°£ ÃøÁ¤ ³¡
+    end = clock(); //ì‹œê°„ ì¸¡ì • ë
     result = ((double)end - start);
     printf("%f\n", result);
 }
 
 int main() {
-    void (*ptr)(int, int);
+    printf("ì„±ëŠ¥ ì²´í¬ ì¤‘...\n");
 
-    printf("¼º´É Ã¼Å© Áß...\n");
+    printf("Swap : XOR (ë©”ëª¨ë¦¬ì ˆì•½) = ");
+    checkTime(func1);
 
-    printf("Swap : XOR (¸Þ¸ð¸®Àý¾à) = ");
-    ptr = func1;
-    checkTime(ptr);
-
-    printf("Swap (¸Þ¸ð¸®»ç¿ë) = ");
-    ptr = func2;
-    checkTime(ptr);
+    printf("Swap (ë©”ëª¨ë¦¬ì‚¬ìš©) = ");
+    checkTime(func2);
 
     printf("Swap : XOR [Inline] = ");
-    ptr = func3;
-    checkTime(ptr);
+    checkTime(func3);
 
     printf("Swap [Inline] = ");
-    ptr = func4;
-    checkTime(ptr);
+    checkTime(func4);
 }

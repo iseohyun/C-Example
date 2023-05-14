@@ -1,37 +1,37 @@
+// * class *
+//	ì ‘ê·¼ ì œì–´ìžì˜ ì—­í• ì€ ì¤‘ìš”í•œ ì œì–´ë³€ìˆ˜ë¥¼ ì™¸ë¶€ ì¸í„°íŽ˜ì´ìŠ¤(ì¡°ìž‘)ìœ¼ë¡œë¶€í„° ë³´í˜¸í•˜ëŠ” ì—­í• ì„ í•©ë‹ˆë‹¤.
+//	ì ‘ê·¼ ì œì–´ìžëŠ” private > protected > public ìˆœìœ¼ë¡œ privateê°€ ê°€ìž¥ ê°•ë ¥í•œ ë³´í˜¸ë¥¼ í•©ë‹ˆë‹¤.
+//	protectedëŠ” ìƒì†ê³¼ ê´€ë ¨ëœ ë³´í˜¸ë ˆë²¨ìž…ë‹ˆë‹¤.
+// 
+//	ë§Œì•½ pvì— ë“¤ì–´ê°€ì•¼ í•˜ëŠ” ë³€ìˆ˜ê°€ ë°˜ë“œì‹œ 0 < pv < 10ì´ë¼ë©´ setPvì–´ë–»ê²Œ ì œì–´í•˜ì‹œê² ìŠµë‹ˆê¹Œ?
+//
+
 using namespace std;
 #include <iostream>
 #include <string>
 
-// * class *
-//	Á¢±Ù Á¦¾îÀÚÀÇ ¿ªÇÒÀº Áß¿äÇÑ Á¦¾îº¯¼ö¸¦ ¿ÜºÎ ÀÎÅÍÆäÀÌ½º(Á¶ÀÛ)À¸·ÎºÎÅÍ º¸È£ÇÏ´Â ¿ªÇÒÀ» ÇÕ´Ï´Ù.
-//	Á¢±Ù Á¦¾îÀÚ´Â private > protected > public ¼øÀ¸·Î private°¡ °¡Àå °­·ÂÇÑ º¸È£¸¦ ÇÕ´Ï´Ù.
-//	protected´Â »ó¼Ó°ú °ü·ÃµÈ º¸È£·¹º§ÀÔ´Ï´Ù.
-// 
-//	¸¸¾à pv¿¡ µé¾î°¡¾ß ÇÏ´Â º¯¼ö°¡ ¹Ýµå½Ã 0 < pv < 10ÀÌ¶ó¸é setPv¾î¶»°Ô Á¦¾îÇÏ½Ã°Ú½À´Ï±î?
-//
-
 class Human {
 private:
-	string name;
+    string name;
 public:
-	string getName() {
-		return name;
-	}
+    string getName() {
+        return name;
+    }
 
-	void setName(string newName) {
-		name = newName;
-	}
+    void setName(string newName) {
+        name = newName;
+    }
 };
 
-void main()
+int main()
 {
-	Human my;
+    Human my;
 
-	//my.name = "¸Ó±Û"; // Á¢±ÙÀÌ µÇÁö ¾Ê±â ¶§¹®¿¡ ¿¡·¯°¡ ¹ß»ý
+    //my.name = "ë¨¸ê¸€"; // ì ‘ê·¼ì´ ë˜ì§€ ì•Šê¸° ë•Œë¬¸ì— ì—ëŸ¬ê°€ ë°œìƒ
 
-	cout << "Name : " << my.getName() << endl;
+    cout << "Name : " << my.getName() << endl;
 
-	my.setName("È£ºø");
+    my.setName("í˜¸ë¹—");
 
-	cout << "New Name : " << my.getName() << endl;
+    cout << "New Name : " << my.getName() << endl;
 }

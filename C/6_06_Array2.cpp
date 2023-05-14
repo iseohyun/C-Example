@@ -1,9 +1,9 @@
-#include <stdio.h>
+// * êµ¬ì¡°ì²´ ë°°ì—´ *
+// êµ¬ì¡°ì²´ë„ ë°°ì—´ë¡œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+// êµ¬ì¡°ì²´ ë°°ì—´ë„ í¬ì¸í„°ì´ê¸° ë•Œë¬¸ì—, (êµ¬ì¡°ì²´ë„ í¬ì¸í„°, ë°°ì—´ë„ í¬ì¸í„°)
+// êµ¬ì¡°ì²´ ë°°ì—´ ì—­ì‹œ ë‹¤ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤.
 
-// * ±¸Á¶Ã¼ ¹è¿­ *
-// ±¸Á¶Ã¼µµ ¹è¿­·Î »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
-// ±¸Á¶Ã¼ ¹è¿­µµ Æ÷ÀÎÅÍÀÌ±â ¶§¹®¿¡, (±¸Á¶Ã¼µµ Æ÷ÀÎÅÍ, ¹è¿­µµ Æ÷ÀÎÅÍ)
-// ±¸Á¶Ã¼ ¹è¿­ ¿ª½Ã ´Ù¸£Áö ¾Ê½À´Ï´Ù.
+#include <stdio.h>
 
 #define FRUIT	0
 #define VEGETABLE	1
@@ -11,9 +11,9 @@
 
 typedef struct
 {
-	char name[10];
-	int kcal;
-	int category;
+    char name[10];
+    int kcal;
+    int category;
 }FOOD;
 
 void printFood(FOOD st);
@@ -21,41 +21,41 @@ void printFoodAll(FOOD*, int);
 
 int main()
 {
-	FOOD food[] =
-	{
-		{"Apple",	50, FRUIT		},
-		{"Been",	42, VEGETABLE	},
-		{"Grape",	57, FRUIT		},
-		{"Carrot",	33, VEGETABLE	},
-		{"Pimento",	39, VEGETABLE	},
-		{"Orange",	97, FRUIT		}
-	};
+    FOOD food[] =
+    {
+        {"Apple",	50, FRUIT		},
+        {"Been",	42, VEGETABLE	},
+        {"Grape",	57, FRUIT		},
+        {"Carrot",	33, VEGETABLE	},
+        {"Pimento",	39, VEGETABLE	},
+        {"Orange",	97, FRUIT		}
+    };
 
-	// Á÷Á¢ Ãâ·ÂÇØº¸±â
-	printf("\n > Á÷Á¢ Ãâ·Â < \n");
-	for (int i = 0; i < (sizeof(food) / sizeof(FOOD)); i++) {
-		printf("%s\t: %d kcal(%s)\n", food[i].name, food[i].kcal, CATEGORY);
-	}
+    // ì§ì ‘ ì¶œë ¥í•´ë³´ê¸°
+    printf("\n > ì§ì ‘ ì¶œë ¥ < \n");
+    for (int i = 0; i < (sizeof(food) / sizeof(FOOD)); i++) {
+        printf("%s\t: %d kcal(%s)\n", food[i].name, food[i].kcal, CATEGORY);
+    }
 
-	// ±¸Á¶Ã¼¸¦ ³Ñ°Ü¼­ Ãâ·ÂÇØº¸±â
-	printf("\n > ±¸Á¶Ã¼ Ãâ·Â < \n");
-	for (int i = (sizeof(food) / sizeof(FOOD)); i--; ) {
-		printFood(food[i]);
-	}
+    // êµ¬ì¡°ì²´ë¥¼ ë„˜ê²¨ì„œ ì¶œë ¥í•´ë³´ê¸°
+    printf("\n > êµ¬ì¡°ì²´ ì¶œë ¥ < \n");
+    for (int i = (sizeof(food) / sizeof(FOOD)); i--; ) {
+        printFood(food[i]);
+    }
 
-	// ÀüÃ¼¸¦ ³Ñ°Ü¼­ Ãâ·ÂÇØº¸±â
-	printf("\n > ÀüÃ¼ ¹è¿­ Ãâ·Â < \n");
-	printFoodAll(food, (sizeof(food) / sizeof(FOOD)));
+    // ì „ì²´ë¥¼ ë„˜ê²¨ì„œ ì¶œë ¥í•´ë³´ê¸°
+    printf("\n > ì „ì²´ ë°°ì—´ ì¶œë ¥ < \n");
+    printFoodAll(food, (sizeof(food) / sizeof(FOOD)));
 }
 
 void printFood(FOOD st)
 {
-	printf("%s\t: %d kcal(%s)\n", st.name, st.kcal, st.category ? "VEGETABLE" : "FRUIT");
+    printf("%s\t: %d kcal(%s)\n", st.name, st.kcal, st.category ? "VEGETABLE" : "FRUIT");
 }
 
 void printFoodAll(FOOD* fd, int len)
 {
-	for (int i = 0; i < len; i++) {
-		printf("%s\t: %d kcal(%s)\n", fd[i].name, fd[i].kcal, fd[i].category ? "VEGETABLE" : "FRUIT");
-	}
+    for (int i = 0; i < len; i++) {
+        printf("%s\t: %d kcal(%s)\n", fd[i].name, fd[i].kcal, fd[i].category ? "VEGETABLE" : "FRUIT");
+    }
 }

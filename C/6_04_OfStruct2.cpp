@@ -1,30 +1,30 @@
+// * êµ¬ì¡°ì²´ ì˜ˆì œ2 *
+// êµ¬ì¡°ì²´ ì•ˆì—, ì–¼ë§ˆë“ ì§€ êµ¬ì¡°ì²´ë¥¼ ë„£ì„ ìˆ˜ ìˆê³ , 
+// ì°¸ì¡° ë°©ì‹ì€ ë§ˆì¹¨í‘œ(.)ë¥¼ ì—°ì†í•´ì„œ ì‚¬ìš©í•˜ë©´ ë©ë‹ˆë‹¤.
+// ì˜ˆì œë¥¼ ì´ìš©í•´ì„œ 4ë¥¼ ì¶œë ¥í•´ ë´…ì‹œë‹¤.
+
 #include <stdio.h>
 
-// * ±¸Á¶Ã¼ ¿¹Á¦2 *
-// ±¸Á¶Ã¼ ¾È¿¡, ¾ó¸¶µçÁö ±¸Á¶Ã¼¸¦ ³ÖÀ» ¼ö ÀÖ°í, 
-// ÂüÁ¶ ¹æ½ÄÀº ¸¶Ä§Ç¥(.)¸¦ ¿¬¼ÓÇØ¼­ »ç¿ëÇÏ¸é µË´Ï´Ù.
-// ¿¹Á¦¸¦ ÀÌ¿ëÇØ¼­ 4¸¦ Ãâ·ÂÇØ º¾½Ã´Ù.
-
-struct ST_A1 {
-	char a1;
-	char a2;
+struct ST1 {
+    char a1;
+    char a2;
 };
 
-struct ST_A2 {
-	char a1;
-	char a2;
-	int a3;
+struct ST2 {
+    char a3;
+    char a4;
+    int a5;
 };
 
-struct ST_B {
-	ST_A1 st_a1;
-	ST_A2 st_a2;
+struct ST_ALL {
+    ST1 st1;
+    ST2 st2;
 };
 
 int main()
 {
-	ST_B st_b = { {1, 2}, {3, 4, 5} };
-	printf("st_b.st_a1[a1,a2] = %d, %d\n", st_b.st_a1.a1, st_b.st_a1.a2);
-	printf("st_b.st_a1[a1,a2, a3] = %d, %d, %d\n", st_b.st_a2.a1, st_b.st_a2.a2, st_b.st_a2.a3);
-	printf("SizeOf [B:%llu / A1:%llu / A2:%llu]\n", sizeof(st_b), sizeof(st_b.st_a1), sizeof(st_b.st_a2));
+    ST_ALL st = { {1, 2}, {3, 4, 5} };
+    printf("[a1, a2] = %d, %d\n", st.st1.a1, st.st1.a2);
+    printf("[a3, a4, a5] = %d, %d, %d\n", st.st2.a3, st.st2.a4, st.st2.a5);
+    printf("SizeOf [ALL:%d / ST1:%d / ST2:%d]\n", sizeof(st), sizeof(st.st1), sizeof(st.st2));
 }

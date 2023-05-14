@@ -1,35 +1,35 @@
-#include <stdio.h>
+// * í˜¸ì¶œìˆœì„œ *
+// í•¨ìˆ˜ëŠ” ë¨¼ì € í˜¸ì¶œ ë˜ë©´, í•˜ë˜ ì¼ì„ ë©ˆì¶”ê³ ,
+// í˜¸ì¶œ ëœ í•¨ìˆ˜ë¥¼ ìˆ˜í–‰ í•œ ë’¤
+// í˜¸ì¶œ ëœ í•¨ìˆ˜ê°€ ëë‚˜ë©´, ë‚¨ì€ ì¼ì„ ë§ˆì € í•©ë‹ˆë‹¤.
 
-// * È£Ãâ¼ø¼­ *
-// ÇÔ¼ö´Â ¸ÕÀú È£Ãâ µÇ¸é, ÇÏ´ø ÀÏÀ» ¸ØÃß°í,
-// È£Ãâ µÈ ÇÔ¼ö¸¦ ¼öÇà ÇÑ µÚ
-// È£Ãâ µÈ ÇÔ¼ö°¡ ³¡³ª¸é, ³²Àº ÀÏÀ» ¸¶Àú ÇÕ´Ï´Ù.
+#include <stdio.h>
 
 void func2()
 {
-	printf("Beautiful\n"); // 2
+    printf("Beautiful\n"); // 2
 }
 
 void func()
 {
-	printf("Hello~\n");	// 1
-	func2();
-	printf("World!\n"); // 3
+    printf("Hello~\n");	// 1
+    func2();
+    printf("World!\n"); // 3
 }
 
 int main()
 {
-	func();
+    func();
 }
 
 /*
 
-½Ç½À°úÁ¦ 1:
-	·Î¶Ç ¹øÈ£¸¦ ·£´ýÀ¸·Î ¹ß»ý½ÃÄÑÁÝ´Ï´Ù.
-	ÇÔ¼öÀÌ¸§Àº "rand45"ÀÔ´Ï´Ù. ÇÔ¼ö³»¿ëÀº 1ºÎÅÍ 45»çÀÌÀÇ ¼ýÀÚ¸¦ Ãâ·ÂÇÕ´Ï´Ù.
+ì‹¤ìŠµê³¼ì œ 1:
+    ë¡œë˜ ë²ˆí˜¸ë¥¼ ëžœë¤ìœ¼ë¡œ ë°œìƒì‹œì¼œì¤ë‹ˆë‹¤.
+    í•¨ìˆ˜ì´ë¦„ì€ "rand45"ìž…ë‹ˆë‹¤. í•¨ìˆ˜ë‚´ìš©ì€ 1ë¶€í„° 45ì‚¬ì´ì˜ ìˆ«ìžë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
 
-½Ç½À°úÁ¦ 2:
-	lottoÇÔ¼ö¸¦ Á¦ÀÛÇÕ´Ï´Ù.
-	lottoÇÔ¼ö´Â 	rand45¸¦ 6¹ø ¹Ýº¹ÇÏ¿© Ãâ·ÂÇÕ´Ï´Ù.
+ì‹¤ìŠµê³¼ì œ 2:
+    lottoí•¨ìˆ˜ë¥¼ ì œìž‘í•©ë‹ˆë‹¤.
+    lottoí•¨ìˆ˜ëŠ” 	rand45ë¥¼ 6ë²ˆ ë°˜ë³µí•˜ì—¬ ì¶œë ¥í•©ë‹ˆë‹¤.
 
 */

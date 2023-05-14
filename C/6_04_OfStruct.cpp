@@ -1,24 +1,24 @@
+// * êµ¬ì¡°ì²´ì†ì˜ êµ¬ì¡°ì²´ *
+// êµ¬ì¡°ì²´ëŠ” ë¬´ì—‡ì´ë“  í¬í•¨ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+// ë”°ë¼ì„œ, êµ¬ì¡°ì²´ëŠ” êµ¬ì¡°ì²´ë„ í¬í•¨ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+
 #include <stdio.h>
 
-// * ±¸Á¶Ã¼¼ÓÀÇ ±¸Á¶Ã¼ *
-// ±¸Á¶Ã¼´Â ¹«¾ùÀÌµç Æ÷ÇÔ ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-// µû¶ó¼­, ±¸Á¶Ã¼´Â ±¸Á¶Ã¼µµ Æ÷ÇÔ ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-
 typedef struct {
-	int i;
+    int i;
 }STR1;
 
 typedef struct {
-	STR1 str1;
+    STR1 str1;
 }STR2;
 
 typedef struct {
-	STR2 str2;
+    STR2 str2;
 }STR3;
 
 int main()
 {
-	STR3 str3;
-	str3.str2.str1.i = 10;
-	printf("%d\n", str3.str2.str1.i);
+    STR3 str3;
+    str3.str2.str1.i = 10;
+    printf("%d\n", str3.str2.str1.i);
 }

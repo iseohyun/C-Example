@@ -1,66 +1,65 @@
+// * ì˜¤ë²„ë¡œë”© *
+// func1, func2ì™€ ê°™ì€ ì´ë¦„ì€ ìš°ë¦¬(ì‚¬ëžŒ)ì´ ëŠë¼ëŠ” ì´ë¦„ì´ê³ , ì»´í“¨í„°ëŠ” ê° ì´ë¦„ëŒ€ì‹  ê³ ìœ ë²ˆí˜¸ë¥¼ ë¶€ì—¬í•´ì„œ êµ¬ë³„í•©ë‹ˆë‹¤.
+// ê³ ìœ ë²ˆí˜¸ë¥¼ ë¶€ì—¬í•  ë•Œ, ì‚¬ìš©í•˜ëŠ” ê²ƒì¤‘ì—ëŠ” ì „ë‹¬ ì¸ìžì˜ íƒ€ìž…ê³¼ ê°¯ìˆ˜ë„ í¬í•¨ì´ ë©ë‹ˆë‹¤.
+// ë”°ë¼ì„œ, func1(int)ì™€ func1(char)ëŠ” ì „í˜€ ë‹¤ë¥¸ ì¸ìžê°€ ë˜ëŠ” ê²ƒìž…ë‹ˆë‹¤.
+// ì˜¤ë²„ë¡œë”©ì€ ê°™ì€ ì´ë¦„ì— ì „ë‹¬ ì¸ìžë§Œ ë‹¤ë¥´ê²Œ êµ¬ì„±í•˜ëŠ” ê²ƒì„ ì˜¤ë²„ë¡œë”©ì´ë¼ê³  í•©ë‹ˆë‹¤.
+
 #include <stdio.h>
-
-// * ¿À¹ö·Îµù *
-// func1, func2¿Í °°Àº ÀÌ¸§Àº ¿ì¸®(»ç¶÷)ÀÌ ´À³¢´Â ÀÌ¸§ÀÌ°í, ÄÄÇ»ÅÍ´Â °¢ ÀÌ¸§´ë½Å °íÀ¯¹øÈ£¸¦ ºÎ¿©ÇØ¼­ ±¸º°ÇÕ´Ï´Ù.
-// °íÀ¯¹øÈ£¸¦ ºÎ¿©ÇÒ ¶§, »ç¿ëÇÏ´Â °ÍÁß¿¡´Â Àü´Þ ÀÎÀÚÀÇ Å¸ÀÔ°ú °¹¼öµµ Æ÷ÇÔÀÌ µË´Ï´Ù.
-// µû¶ó¼­, func1(int)¿Í func1(char)´Â ÀüÇô ´Ù¸¥ ÀÎÀÚ°¡ µÇ´Â °ÍÀÔ´Ï´Ù.
-// ¿À¹ö·ÎµùÀº °°Àº ÀÌ¸§¿¡ Àü´Þ ÀÎÀÚ¸¸ ´Ù¸£°Ô ±¸¼ºÇÏ´Â °ÍÀ» ¿À¹ö·ÎµùÀÌ¶ó°í ÇÕ´Ï´Ù.
-
 
 void show()
 {
-	printf("Factor: Nothing\n");
+    printf("Factor: Nothing\n");
 }
 
 void show(int a)
 {
-	printf("Factor : %d\n", a);
+    printf("Factor : %d\n", a);
 }
 
 void show(char a)
 {
-	printf("Factor : %c\n", a);
+    printf("Factor : %c\n", a);
 }
 
 void show(double a)
 {
-	printf("Factor : %lf\n", a);
+    printf("Factor : %lf\n", a);
 }
 
 void show(double a, char b)
 {
-	printf("Factor : %lf, %c\n", a, b);
+    printf("Factor : %lf, %c\n", a, b);
 }
 
 void show(double a, int b)
 {
-	printf("Factor : %lf, %d\n", a, b);
+    printf("Factor : %lf, %d\n", a, b);
 }
 
 void show(double a, int b, char c)
 {
-	printf("Factor : %lf, %d, %c\n", a, b, c);
+    printf("Factor : %lf, %d, %c\n", a, b, c);
 }
 
 int main()
 {
-	show();
-	show(10);
-	show('A');
-	show(3.14);
-	show(2.71, 'B');
-	show(9.8, 20);
-	show(1.414, 30, 'C');
+    show();
+    show(10);
+    show('A');
+    show(3.14);
+    show(2.71, 'B');
+    show(9.8, 20);
+    show(1.414, 30, 'C');
 }
 
 /*
-½Ç½À°úÁ¦ 1:
-	sumÇÔ¼ö¸¦ Á¦ÀÛÇÕ´Ï´Ù. x + y¸¦ ¼öÇàÇÕ´Ï´Ù.
+ì‹¤ìŠµê³¼ì œ 1:
+    sumí•¨ìˆ˜ë¥¼ ì œìž‘í•©ë‹ˆë‹¤. x + yë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.
 
-½Ç½À°úÁ¦ 2:
-	sumÇÔ¼ö¸¦ Á¦ÀÛÇÕ´Ï´Ù. x + y + z¸¦ ¼öÇàÇÕ´Ï´Ù.
+ì‹¤ìŠµê³¼ì œ 2:
+    sumí•¨ìˆ˜ë¥¼ ì œìž‘í•©ë‹ˆë‹¤. x + y + zë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.
 
-½Ç½À°úÁ¦ 3:
-	sumÇÔ¼ö¸¦ Á¦ÀÛÇÕ´Ï´Ù. Á¤¼ö + ¼Ò¼ö¸¦ ¼öÇàÇÕ´Ï´Ù.
-	¿¹¸¦µé¾î 2 + 2.5¸¦ ¼öÇàÇÕ´Ï´Ù.
+ì‹¤ìŠµê³¼ì œ 3:
+    sumí•¨ìˆ˜ë¥¼ ì œìž‘í•©ë‹ˆë‹¤. ì •ìˆ˜ + ì†Œìˆ˜ë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.
+    ì˜ˆë¥¼ë“¤ì–´ 2 + 2.5ë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.
 */

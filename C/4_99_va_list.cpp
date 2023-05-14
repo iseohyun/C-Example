@@ -1,18 +1,18 @@
-#include <stdio.h>
-#include <stdarg.h>
-
-// * °¡º¯ÀÎ¼ö *
-// va_arg, va_copy, va_end, va_start¿¡ ´ëÇÑ ¿¹¾à¾î(?)¸¦ »ç¿ëÇÕ´Ï´Ù.
-// stdarg.h¸¦ ÂüÁ¶ÇÏ½Ê½Ã¿À.
-// ÁÖÀÇ, ¸î°³ÀÇ º¯¼ö¸¦ ÂüÁ¶ÇÒ °ÍÀÎ°¡´Â ÇÔ¼ö¿¡¼­ ¾Ë ¼ö ¾ø±â ¶§¹®¿¡,
-// Á÷Á¢ ÀÎÀÚÀÇ °¹¼ö¸¦ ¾Ë·ÁÁÖ¾î¾ß ÇÕ´Ï´Ù.
-// °¡º¯ÀÎ¼öÀÇ ¸Å·ÂÀÌ ÀÎ¼öÀÇ °¹¼ö°¡ Á¤ÇØÁöÁö ¾ÊÀº¸¸Å­, ¹Ì¸® °¹¼ö¸¦ Á¤ÇØ³õ´Â°ÍÀº ÀÇ¹Ì°¡ ¾ø½À´Ï´Ù.
+// * ê°€ë³€ì¸ìˆ˜ *
+// va_arg, va_copy, va_end, va_startì— ëŒ€í•œ ì˜ˆì•½ì–´(?)ë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤.
+// stdarg.hë¥¼ ì°¸ì¡°í•˜ì‹­ì‹œì˜¤.
+// ì£¼ì˜, ëª‡ê°œì˜ ë³€ìˆ˜ë¥¼ ì°¸ì¡°í•  ê²ƒì¸ê°€ëŠ” í•¨ìˆ˜ì—ì„œ ì•Œ ìˆ˜ ì—†ê¸° ë•Œë¬¸ì—,
+// ì§ì ‘ ì¸ìžì˜ ê°¯ìˆ˜ë¥¼ ì•Œë ¤ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤.
+// ê°€ë³€ì¸ìˆ˜ì˜ ë§¤ë ¥ì´ ì¸ìˆ˜ì˜ ê°¯ìˆ˜ê°€ ì •í•´ì§€ì§€ ì•Šì€ë§Œí¼, ë¯¸ë¦¬ ê°¯ìˆ˜ë¥¼ ì •í•´ë†“ëŠ”ê²ƒì€ ì˜ë¯¸ê°€ ì—†ìŠµë‹ˆë‹¤.
 //
-// ÀüÅëÀûÀ¸·Î ÀÌ·¯ÇÑ ÀÌ½´¸¦ ÇØ°áÇÏ±â À§ÇØ¼­ main¿¡¼­´Â
-// argc, argv[](or args[])¸¦ Àü´ÞÇÕ´Ï´Ù.
-// argc´Â ¸î°³ÀÇ argument(ÀÎÀÚ)¸¦ Àü¼ÛÇÒ °ÍÀÎÁö¸¦ ÀÇ¹ÌÇÕ´Ï´Ù.
+// ì „í†µì ìœ¼ë¡œ ì´ëŸ¬í•œ ì´ìŠˆë¥¼ í•´ê²°í•˜ê¸° ìœ„í•´ì„œ mainì—ì„œëŠ”
+// argc, argv[](or args[])ë¥¼ ì „ë‹¬í•©ë‹ˆë‹¤.
+// argcëŠ” ëª‡ê°œì˜ argument(ì¸ìž)ë¥¼ ì „ì†¡í•  ê²ƒì¸ì§€ë¥¼ ì˜ë¯¸í•©ë‹ˆë‹¤.
 // 
 // https://docs.microsoft.com/ko-kr/cpp/cpp/functions-with-variable-argument-lists-cpp?view=msvc-160
+
+#include <stdio.h>
+#include <stdarg.h>
 
 int myFunc(int size, ...)
 {

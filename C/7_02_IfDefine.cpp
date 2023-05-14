@@ -1,28 +1,28 @@
 #include <stdio.h>
 
-// * ÀüÃ³¸®±â *
-// ÇÁ·Î¼¼½º¸¦ Ã³¸®ÇÏ±â Àü¿¡, ½ÇÇàÇÒ ¶óÀÎÀ» ÁöÁ¤ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-// #define, #ifdef, #inndef, #else, #endif¿Í °°ÀÌ »ç¿ëµË´Ï´Ù.
+// * ì „ì²˜ë¦¬ê¸° *
+// í”„ë¡œì„¸ìŠ¤ë¥¼ ì²˜ë¦¬í•˜ê¸° ì „ì—, ì‹¤í–‰í•  ë¼ì¸ì„ ì§€ì •í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+// #define, #ifdef, #inndef, #else, #endifì™€ ê°™ì´ ì‚¬ìš©ë©ë‹ˆë‹¤.
 // 
-// ¸î°³ÀÇ DefineÀº ¾Æ·¡¿Í °°ÀÌ ÁöÁ¤µÇ¾î ÀÖ½À´Ï´Ù.
-// __FILE__	: ÇöÀç ÆÄÀÏ¸íÀ» Ãâ·ÂÇÕ´Ï´Ù.
-// __LINE__ : ÇöÀç ¼öÇàÁßÀÎ ¶óÀÎÀ» Ãâ·ÂÇÕ´Ï´Ù.
-// __DATE__ : ÇöÀç ½Ã½ºÅÛ ³¯Â¥¸¦ Ãâ·ÂÇÕ´Ï´Ù.
-// __TIME__ : ÇöÀç ½Ã½ºÅÛ ½Ã°¢À» Ãâ·ÂÇÕ´Ï´Ù.
+// ëª‡ê°œì˜ Defineì€ ì•„ë˜ì™€ ê°™ì´ ì§€ì •ë˜ì–´ ìˆìŠµë‹ˆë‹¤.
+// __FILE__	: í˜„ì¬ íŒŒì¼ëª…ì„ ì¶œë ¥í•©ë‹ˆë‹¤.
+// __LINE__ : í˜„ì¬ ìˆ˜í–‰ì¤‘ì¸ ë¼ì¸ì„ ì¶œë ¥í•©ë‹ˆë‹¤.
+// __DATE__ : í˜„ì¬ ì‹œìŠ¤í…œ ë‚ ì§œë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
+// __TIME__ : í˜„ì¬ ì‹œìŠ¤í…œ ì‹œê°ì„ ì¶œë ¥í•©ë‹ˆë‹¤.
 
 #define PREPROCESS
 
 int main()
 {
 #ifdef PREPROCESS
-	printf("Preprocess defined.\n");
+    printf("Preprocess defined.\n");
 #endif
 #undef PREPROCESS
 #ifdef PREPROCESS
-	printf("Now, Preprocess defined.\n");
+    printf("Now, Preprocess defined.\n");
 #else
-	printf("Now, Preprocess NOT defined.\n");
+    printf("Now, Preprocess NOT defined.\n");
 #endif
-	printf("%s(%d) - Working!\n", __FILE__, __LINE__);
-	printf("TIME : %s %s\n", __DATE__, __TIME__);
+    printf("%s(%d) - Working!\n", __FILE__, __LINE__);
+    printf("TIME : %s %s\n", __DATE__, __TIME__);
 }

@@ -1,54 +1,53 @@
+// * ë¦¬í„´ *
+// ë¦¬í„´ì€ í•¨ìˆ˜ê°€ ì–´ë–¤ ë³€ìˆ˜ë¥¼ ë°˜í™˜í• ì§€ ê²°ìž¥í•˜ëŠ” êµ¬ë¬¸ìž…ë‹ˆë‹¤.
+// voidëŠ” ì—†ìŒì„ ì˜ë¯¸í•˜ëŠ” 'ìžë£Œí˜•'ìž…ë‹ˆë‹¤.
+// int, double, charë“± ë‹¤ë¥¸ ìžë£Œí˜•ì„ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+// ë¦¬í„´ì€ ì „ë‹¬ì¸ìžì²˜ëŸ¼ ì—¬ëŸ¬ê°œë¥¼ ì„¤ì • í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+// ë‹¨ í•œê°œì˜ ë¦¬í„´ë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+//
+
 #include <stdio.h>
 
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-// * ¸®ÅÏ *
-// ¸®ÅÏÀº ÇÔ¼ö°¡ ¾î¶² º¯¼ö¸¦ ¹ÝÈ¯ÇÒÁö °áÀåÇÏ´Â ±¸¹®ÀÔ´Ï´Ù.
-// void´Â ¾øÀ½À» ÀÇ¹ÌÇÏ´Â 'ÀÚ·áÇü'ÀÔ´Ï´Ù.
-// int, double, charµî ´Ù¸¥ ÀÚ·áÇüÀ» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
-// ¸®ÅÏÀº Àü´ÞÀÎÀÚÃ³·³ ¿©·¯°³¸¦ ¼³Á¤ ÇÒ ¼ö ¾ø½À´Ï´Ù.
-// ´Ü ÇÑ°³ÀÇ ¸®ÅÏ¸¸ °¡´ÉÇÕ´Ï´Ù.
-//
-
-
 int func01()
 {
-	return 999;
+    return 999;
 }
 
 int main()
 {
-	int i;
-	
-	i = func01();
+    int i;
+    
+    i = func01();
 
-	printf("º¯¼ö¿¡ ¹Þ¾Æ¼­ Ãâ·Â : %d\n", i);
-	printf("Á÷Á¢ Ãâ·Â : %d\n", func01());
+    printf("ë³€ìˆ˜ì— ë°›ì•„ì„œ ì¶œë ¥ : %d\n", i);
+    printf("ì§ì ‘ ì¶œë ¥ : %d\n", func01());
 }
 
 /*
-½Ç½À°úÁ¦ 1:
-	ÀÔ·ÂÇÑ ¼ýÀÚÀÇ 2¹è¸¦ ¹ÝÈ¯ÇÏ´Â ¼ýÀÚ¸¦ µ¹·Á¹Þ½À´Ï´Ù.
+ì‹¤ìŠµê³¼ì œ 1:
+    ìž…ë ¥í•œ ìˆ«ìžì˜ 2ë°°ë¥¼ ë°˜í™˜í•˜ëŠ” ìˆ«ìžë¥¼ ëŒë ¤ë°›ìŠµë‹ˆë‹¤.
 
-½Ç½À°úÁ¦ 2:
-	Æ÷¹°¼±À¸·Î Æ÷ÅºÀ» ¹ß»çÇÕ´Ï´Ù.
-	Æ÷ÅºÀº ÀÏÁ¤ÇÑ Àå¾à(Æø¹ß¹°)À» °¡Áö°í ÀÖ½À´Ï´Ù. µû¶ó¼­ ÃÊ±â ¼Óµµ´Â ¾ðÁ¦³ª 20m/s·Î ÀÏÁ¤ ÇÕ´Ï´Ù.
-	°ø±â ÀúÇ×Àº ¹«½ÃÇÕ´Ï´Ù.
-	Áß·Â°¡¼Óµµ´Â 10m/s·Î ÀÏÁ¤ÇÕ´Ï´Ù.
-	¿¹¸¦ µé¸é, Æ÷ÅºÀ» À§ÂÊÀ¸·Î ¹ß»çÇßÀ» ¶§ ÃÑ ºñÇà ½Ã°£Àº 4ÃÊ ÀÔ´Ï´Ù.
-	4ÃÊ µ¿¾È Æ÷ÅºÀÇ xÃà ºñÇà¼Óµµ¸¦ ±¸ÇÏ¸é, ³«ÇÏ °Å¸®¸¦ ±¸ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-	45µµ·Î ¹ß»ç ÇßÀ» ¶§, ³«ÇÏ°Å¸®¸¦ ±¸ÇØº¾´Ï´Ù.
+ì‹¤ìŠµê³¼ì œ 2:
+    í¬ë¬¼ì„ ìœ¼ë¡œ í¬íƒ„ì„ ë°œì‚¬í•©ë‹ˆë‹¤.
+    í¬íƒ„ì€ ì¼ì •í•œ ìž¥ì•½(í­ë°œë¬¼)ì„ ê°€ì§€ê³  ìžˆìŠµë‹ˆë‹¤. ë”°ë¼ì„œ ì´ˆê¸° ì†ë„ëŠ” ì–¸ì œë‚˜ 20m/së¡œ ì¼ì • í•©ë‹ˆë‹¤.
+    ê³µê¸° ì €í•­ì€ ë¬´ì‹œí•©ë‹ˆë‹¤.
+    ì¤‘ë ¥ê°€ì†ë„ëŠ” 10m/së¡œ ì¼ì •í•©ë‹ˆë‹¤.
+    ì˜ˆë¥¼ ë“¤ë©´, í¬íƒ„ì„ ìœ„ìª½ìœ¼ë¡œ ë°œì‚¬í–ˆì„ ë•Œ ì´ ë¹„í–‰ ì‹œê°„ì€ 4ì´ˆ ìž…ë‹ˆë‹¤.
+    4ì´ˆ ë™ì•ˆ í¬íƒ„ì˜ xì¶• ë¹„í–‰ì†ë„ë¥¼ êµ¬í•˜ë©´, ë‚™í•˜ ê±°ë¦¬ë¥¼ êµ¬í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+    45ë„ë¡œ ë°œì‚¬ í–ˆì„ ë•Œ, ë‚™í•˜ê±°ë¦¬ë¥¼ êµ¬í•´ë´…ë‹ˆë‹¤.
 
-	Âü°í : https://www.desmos.com/calculator/nmiymdpxhf
+    ì°¸ê³  : https://www.desmos.com/calculator/nmiymdpxhf
 
-½Ç½À°úÁ¦ 3:
-	double x = sin((angle/180) * M_PI);
-	double y = cos((angle/180) * M_PI);
+ì‹¤ìŠµê³¼ì œ 3:
+    double x = sin((angle/180) * M_PI);
+    double y = cos((angle/180) * M_PI);
 
-	ÃÑ ºñÇà½Ã°£À» ±¸ÇÏ´Â ÇÔ¼ö¸¦ ±¸ÇÕ´Ï´Ù.
-	xÃà ºñÇà¼Óµµ¸¦ ±¸ÇÏ´Â ÇÔ¼ö¸¦ ¸¸µì´Ï´Ù.
-	ÃÑ ºñÇà°Å¸®¸¦ ±¸ÇÏ´Â ÇÔ¼ö¸¦ ¸¸µì´Ï´Ù.
+    ì´ ë¹„í–‰ì‹œê°„ì„ êµ¬í•˜ëŠ” í•¨ìˆ˜ë¥¼ êµ¬í•©ë‹ˆë‹¤.
+    xì¶• ë¹„í–‰ì†ë„ë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“­ë‹ˆë‹¤.
+    ì´ ë¹„í–‰ê±°ë¦¬ë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“­ë‹ˆë‹¤.
 
-	Âü°í : https://example-code.tistory.com/entry/%ED%8F%AC%ED%83%84-%EA%B7%B8%EB%9E%98%ED%94%84-%EC%BD%94%EB%94%A9%ED%95%98%EA%B8%B0
+    ì°¸ê³  : https://example-code.tistory.com/entry/%ED%8F%AC%ED%83%84-%EA%B7%B8%EB%9E%98%ED%94%84-%EC%BD%94%EB%94%A9%ED%95%98%EA%B8%B0
 */

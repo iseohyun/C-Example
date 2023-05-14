@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\C\7_09_File.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="log.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

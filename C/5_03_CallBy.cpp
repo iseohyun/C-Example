@@ -1,10 +1,10 @@
-#include <stdio.h>
+// * ìš©ì–´ ì •ë¦¬ *
+// ì „ë‹¬ ë˜ëŠ” ë³€ìˆ˜ê°€ ê°’ì¸ ê²½ìš°ì— "ì½œ ë°”ì´ ë²¨ë¥˜(Call By Value)"
+// ì „ë‹¬ ë˜ëŠ” ë³€ìˆ˜ê°€ ì£¼ì†Œì¸ ê²½ìš°ì— "ì½œ ë°”ì´ ë ˆí¼ëŸ°ìŠ¤(Call By Reference)"
+// int&ì— ì˜í•´ ì „ë‹¬ ë˜ëŠ” ê°’ì€ C++ì–¸ì–´ì— ì¶”ê°€ëœ ê°œë…ì´ì§€ë§Œ, ì‚¬ìš©ë²•ì´ ê°„ë‹¨í•˜ê¸° ë•Œë¬¸ì— ì¶”ê°€í•˜ì˜€ë‹¤.
+// Call By Addressë¼ê³  ë¶€ë¥¸ë‹¤.
 
-// * ¿ë¾î Á¤¸® *
-// Àü´Ş µÇ´Â º¯¼ö°¡ °ªÀÎ °æ¿ì¿¡ "Äİ ¹ÙÀÌ º§·ù(Call By Value)"
-// Àü´Ş µÇ´Â º¯¼ö°¡ ÁÖ¼ÒÀÎ °æ¿ì¿¡ "Äİ ¹ÙÀÌ ·¹ÆÛ·±½º(Call By Reference)"
-// int&¿¡ ÀÇÇØ Àü´Ş µÇ´Â °ªÀº C++¾ğ¾î¿¡ Ãß°¡µÈ °³³äÀÌÁö¸¸, »ç¿ë¹ıÀÌ °£´ÜÇÏ±â ¶§¹®¿¡ Ãß°¡ÇÏ¿´´Ù.
-// Call By Address¶ó°í ºÎ¸¥´Ù.
+#include <stdio.h>
 
 void callbyRef(int*);
 void callbyValue(int);
@@ -12,37 +12,37 @@ void callByAddr(int&);
 
 int main()
 {
-	int i = 100, j = 200, k = 300;
-	int* p = &j;
-	printf("i = [%d], *p = [%d], k =[%d]\n", i, *p, k);
+    int i = 100, j = 200, k = 300;
+    int* p = &j;
+    printf("i = [%d], *p = [%d], k =[%d]\n", i, *p, k);
 
-	callbyRef(p);
-	callbyValue(i);
-	callByAddr(k);
+    callbyRef(p);
+    callbyValue(i);
+    callByAddr(k);
 
-	printf("i = [%d], *p = [%d], k =[%d]\n", i, *p, k);
+    printf("i = [%d], *p = [%d], k =[%d]\n", i, *p, k);
 
-	callbyValue(*p);
-	callbyRef(&i);
-	callByAddr(k);
+    callbyValue(*p);
+    callbyRef(&i);
+    callByAddr(k);
 
-	printf("i = [%d], *p = [%d], k =[%d]\n", i, *p, k);
+    printf("i = [%d], *p = [%d], k =[%d]\n", i, *p, k);
 }
 
 void callbyRef(int* p)
 {
-	*p += 5;
-	printf("- Call By Ref : %d\n", *p);
+    *p += 5;
+    printf("- Call By Ref : %d\n", *p);
 }
 
 void callbyValue(int i)
 {
-	i += 7;
-	printf("- Call By Value : %d\n", i);
+    i += 7;
+    printf("- Call By Value : %d\n", i);
 }
 
 void callByAddr(int& k)
 {
-	k += 9;
-	printf("- Call By Address : %d\n", k);
+    k += 9;
+    printf("- Call By Address : %d\n", k);
 }

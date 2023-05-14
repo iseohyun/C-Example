@@ -1,17 +1,17 @@
-#include <stdio.h>
+// * ìž„ë² ë””ë“œ *
+// ì•„ëž˜ ì˜ˆì œì—ì„œëŠ” ê°’ì´ ë³€ë™ë  ì´ìœ ê°€ ì—†ìŠµë‹ˆë‹¤.
+// í•˜ì§€ë§Œ, ìž„ë² ë””ë“œì˜ ì„¸ê³„ì—ì„œëŠ” ì‹¤í–‰ì¤‘ì— ì„¼ì„œê°’ì´ ë“¤ì–´ì™€ì„œ ê°’ì´ ë³€í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+// ê·¸ëŸ¬ë©´ í”„ë¡œê·¸ëž¨ì€ ì´ë¯¸ ì½ì€ ê°’ì€ ì‹ ë¢°í•˜ê³  ê·¸ëŒ€ë¡œ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ì•„ë‹ˆê³ 
+// ì½ê¸°ê°€ ì‹œë„ ë  ë•Œë§ˆë‹¤, í•´ë‹¹ ë³€ìˆ˜ë¥¼ ì½ì–´ì™€ì•¼ í•©ë‹ˆë‹¤.
+// ì´ë•Œ ì‚¬ìš©ë˜ëŠ” í‚¤ì›Œë“œê°€ volatileìž…ë‹ˆë‹¤.
 
-// * ÀÓº£µðµå *
-// ¾Æ·¡ ¿¹Á¦¿¡¼­´Â °ªÀÌ º¯µ¿µÉ ÀÌÀ¯°¡ ¾ø½À´Ï´Ù.
-// ÇÏÁö¸¸, ÀÓº£µðµåÀÇ ¼¼°è¿¡¼­´Â ½ÇÇàÁß¿¡ ¼¾¼­°ªÀÌ µé¾î¿Í¼­ °ªÀÌ º¯ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-// ±×·¯¸é ÇÁ·Î±×·¥Àº ÀÌ¹Ì ÀÐÀº °ªÀº ½Å·ÚÇÏ°í ±×´ë·Î »ç¿ëÇÏ´Â °ÍÀÌ ¾Æ´Ï°í
-// ÀÐ±â°¡ ½Ãµµ µÉ ¶§¸¶´Ù, ÇØ´ç º¯¼ö¸¦ ÀÐ¾î¿Í¾ß ÇÕ´Ï´Ù.
-// ÀÌ¶§ »ç¿ëµÇ´Â Å°¿öµå°¡ volatileÀÔ´Ï´Ù.
+#include <stdio.h>
 
 int main()
 {
-	volatile int sensor = 1;
+    volatile int sensor = 1;
 
-	printf("Sensor : %d\n", sensor);
-	printf("Sensor : %d\n", sensor);
-	printf("Sensor : %d\n", sensor);
+    printf("Sensor : %d\n", sensor);
+    printf("Sensor : %d\n", sensor);
+    printf("Sensor : %d\n", sensor);
 }

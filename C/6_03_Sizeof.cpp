@@ -1,36 +1,38 @@
+// * êµ¬ì¡°ì²´ì˜ í¬ê¸° *
+// êµ¬ì¡°ì²´ëŠ” ì£¼ë¡œ ì„ ì–¸ë˜ëŠ” ìˆœì„œëŒ€ë¡œ ë°°ì¹˜ê°€ ë©ë‹ˆë‹¤.
+// ì´ë•Œ, 32bit(4byte)ë¡œ íŒ©í‚¹(í¬ìž¥)ì´ ë˜ëŠ”ë°, 32bitë¡œ í¬ìž¥ì´ ë˜ëŠ” ì´ìœ ëŠ”
+// ìƒë‹¹ížˆ ì˜¤ëžœ ì‹œê°„ë™ì•ˆ ì‹œì¤‘ì˜ ì»´í“¨í„°ê°€ 32bit busë¥¼ ì‚¬ìš©í–ˆê¸° ë•Œë¬¸ìž…ë‹ˆë‹¤.
+// 32bitë¥¼ 1ê°œì˜ ë‹¨ì–´, ì¦‰ wordë¼ê³  ë§í•©ë‹ˆë‹¤.
+// ì»´í“¨í„°ê°€ í•œë²ˆì— ì²˜ë¦¬ í•  ìˆ˜ ìžˆëŠ” ìš©ëŸ‰ì— ë§žì¶°ì„œ í¬ìž¥í•˜ëŠ” ì´ìœ ëŠ” ê·¸ëž˜ì•¼ ì²˜ë¦¬ì†ë„ì—ì„œ ìš°ìœ„ë¥¼ ì í•  ìˆ˜ ìžˆê¸° ë•Œë¬¸ìž…ë‹ˆë‹¤.
+// ë§Œì•½ì— DATE2ì˜ dayê°€ 4byteë‹¨ìœ„ë¡œ ìž˜ë¼ì§€ì§€ ì•Šì•˜ë‹¤ê³  ê°€ì •í•´ë´…ì‹œë‹¤.
+// ê·¸ë ‡ë‹¤ë©´ 2ë²ˆì— ë‚˜ëˆ„ì–´ì„œ í˜¸ì¶œì´ ë˜ê³ , í˜¸ì¶œì´ ëœ í›„ì— ë‹¤ì‹œ ì²˜ë¦¬ë¥¼ í•´ì•¼í•©ë‹ˆë‹¤.
+// ì²˜ë¦¬ê°€ í•„ìš”í•œ ì´ìœ ëŠ” ì—”ë””ì•ˆê³¼ ì—°ê´€ì´ ë†’ìœ¼ë©°, ë””ë²„ê¹…ì„ í†µí•´ì„œ í™•ì¸ í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+
 #include <stdio.h>
 
-// * ±¸Á¶Ã¼ÀÇ Å©±â *
-// ±¸Á¶Ã¼´Â ÁÖ·Î ¼±¾ðµÇ´Â ¼ø¼­´ë·Î ¹èÄ¡°¡ µË´Ï´Ù.
-// ÀÌ¶§, 32bit(4byte)·Î ÆÑÅ·(Æ÷Àå)ÀÌ µÇ´Âµ¥, 32bit·Î Æ÷ÀåÀÌ µÇ´Â ÀÌÀ¯´Â
-// »ó´çÈ÷ ¿À·£ ½Ã°£µ¿¾È ½ÃÁßÀÇ ÄÄÇ»ÅÍ°¡ 32bit bus¸¦ »ç¿ëÇß±â ¶§¹®ÀÔ´Ï´Ù.
-// 32bit¸¦ 1°³ÀÇ ´Ü¾î, Áï word¶ó°í ¸»ÇÕ´Ï´Ù.
-// ÄÄÇ»ÅÍ°¡ ÇÑ¹ø¿¡ Ã³¸® ÇÒ ¼ö ÀÖ´Â ¿ë·®¿¡ ¸ÂÃç¼­ Æ÷ÀåÇÏ´Â ÀÌÀ¯´Â ±×·¡¾ß Ã³¸®¼Óµµ¿¡¼­ ¿ìÀ§¸¦ Á¡ÇÒ ¼ö ÀÖ±â ¶§¹®ÀÔ´Ï´Ù.
-// ¸¸¾à¿¡ DATE2ÀÇ day°¡ 4byte´ÜÀ§·Î Àß¶óÁöÁö ¾Ê¾Ò´Ù°í °¡Á¤ÇØº¾½Ã´Ù.
-// ±×·¸´Ù¸é 2¹ø¿¡ ³ª´©¾î¼­ È£ÃâÀÌ µÇ°í, È£ÃâÀÌ µÈ ÈÄ¿¡ ´Ù½Ã Ã³¸®¸¦ ÇØ¾ßÇÕ´Ï´Ù.
-// Ã³¸®°¡ ÇÊ¿äÇÑ ÀÌÀ¯´Â ¿£µð¾È°ú ¿¬°üÀÌ ³ôÀ¸¸ç, µð¹ö±ëÀ» ÅëÇØ¼­ È®ÀÎ ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+typedef struct {
+    char char1;
+    char char2;
+    char char3;
+}STR1;
 
 typedef struct {
-	char  year;
-	char month;
-	char day;
-}DATE;
+    char char1;
+    int int2;
+    char char3;
+}STR2;
 
 typedef struct {
-	char year;
-	char month;
-	int day;
-}DATE2;
-
-typedef struct {
-	char year;
-	int month;
-	char day;
-}DATE3;
+    char char1;
+    char char2;
+    int int3;
+}STR3;
 
 int main()
 {
-	char A[3];
-	printf("%llu/%llu\n", sizeof(A), sizeof(DATE));
-	printf("%llu/%llu\n", sizeof(DATE2), sizeof(DATE3));
+    char A[3];
+    printf("char[3]: %d\n", sizeof(A));
+    printf("STR1: %d\n", sizeof(STR1));
+    printf("STR2: %d\n", sizeof(STR2));
+    printf("STR3: %d\n", sizeof(STR3));
 }
