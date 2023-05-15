@@ -1,40 +1,48 @@
-﻿#include <iostream>
+﻿// ## B는 A와 연관(Association)되어 있다.
+//
+// * B ----> A (실선)
+// * B ----- A (실선)
+//
+// ## C는 A를 의존(Dependency)한다.
+//
+// * C - - > A (점선)
+using namespace std;
+#include <iostream>
+#include <string>
 
-// ## B는 A와 연관되어 있다.
-// 
-// * B ----> A
-// 
-// ## C는 A를 의존한다.
-// 
-// * C - - > A
-
-class A {
+class A
+{
 public:
-    char object = 'A';
+    string str;
 };
 
-class B{
-private:
-    A a;
-    char option = 'B';
+class B
+{
 public:
-    void run() {
-        std::cout << a.object << option << '\n';
+    void run(A a)
+    {
+        cout << "Class B: " << a.str << endl;
     }
 };
 
-class C {
+class C
+{
 public:
-    void run() {
-        A a;
-        std::cout << a.object << '\n';
+    A a;
+    void run()
+    {
+        a.str = "@C";
+        cout << "Class C: " << a.str << endl;
     }
 };
 
 int main()
 {
+    A a;
     B b;
-    b.run();
+
+    a.str = "@main";
+    b.run(a);
 
     C c;
     c.run();

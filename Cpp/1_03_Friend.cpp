@@ -1,42 +1,42 @@
+// * friend *
+// ì ‘ê·¼ ì œì–´ë¥¼ ì˜ˆì™¸ì ìœ¼ë¡œ ë¬´ì‹œí•´ì•¼í•  ê²½ìš°,
+// ê¸°ì¡´ì˜ ì„¤ê³„ë¥¼ ë³€ê²½í•˜ì§€ ì•Šê³ , ì ‘ê·¼ í•  ìˆ˜ ìˆëŠ” í‚¤ì›Œë“œê°€ ì¡´ì¬í•©ë‹ˆë‹¤.
+
 using namespace std;
 #include <iostream>
 #include <string>
 
-// * friend *
-// Á¢±Ù Á¦¾î¸¦ ¿¹¿ÜÀûÀ¸·Î ¹«½ÃÇØ¾ßÇÒ °æ¿ì,
-// ±âÁ¸ÀÇ ¼³°è¸¦ º¯°æÇÏÁö ¾Ê°í, Á¢±Ù ÇÒ ¼ö ÀÖ´Â Å°¿öµå°¡ Á¸ÀçÇÕ´Ï´Ù.
-
 class Human {
 private:
-	string name;
+    string name;
 public:
-	string getName() {
-		return name;
-	}
+    string getName() {
+        return name;
+    }
 
-	void setName(string newName) {
-		name = newName;
-	}
+    void setName(string newName) {
+        name = newName;
+    }
 
-	friend class ELF; // ÇØ´ç Å°¿öµå¸¦ »èÁ¦ÇÏ¸é ¾î¶² ¸í·É¾î¿¡¼­ ¿¡·¯°¡ ³ª´ÂÁö È®ÀÎ ÇØº¸ÀÚ.
+    friend class ELF; // í•´ë‹¹ í‚¤ì›Œë“œë¥¼ ì‚­ì œí•˜ë©´ ì–´ë–¤ ëª…ë ¹ì–´ì—ì„œ ì—ëŸ¬ê°€ ë‚˜ëŠ”ì§€ í™•ì¸ í•´ë³´ì.
 };
 
 class ELF {
 public:
-	void setHuman(Human &human, string name) {
-		human.name = name;
-	}
+    void setHuman(Human &human, string name) {
+        human.name = name;
+    }
 };
 
 int main()
 {
-	Human me;
-	ELF elf;
+    Human me;
+    ELF elf;
 
-	me.setName("¸Ó±Û");
-	cout << "ÀÌ¸§ : " << me.getName() << endl;
+    me.setName("ë¨¸ê¸€");
+    cout << "ì´ë¦„ : " << me.getName() << endl;
 
-	elf.setHuman(me, "È£ºø");
+    elf.setHuman(me, "í˜¸ë¹—");
 
-	cout << "ÀÌ¸§ : " << me.getName() << endl;
+    cout << "ì´ë¦„ : " << me.getName() << endl;
 }

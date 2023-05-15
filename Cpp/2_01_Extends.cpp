@@ -2,41 +2,41 @@ using namespace std;
 #include <iostream>
 #include <string>
 
-// * »ó¼Ó *
-// ºÎ¸ğ·Î ºÎÅÍ »ó¼Ó¹ŞÀº ±â´ÉÀ» ±×´ë·Î »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
-// ÀÌ´Â °´Ã¼¶ó´Â °³³äÀûÀ¸·Îµµ ÈÇ¸¢ÇÏÁö¸¸, ÄÚµå¸¦ Àç»ç¿ë ÇÒ ¼ö ÀÖ´Ù´Âµ¥ ¾ÆÁÖ Å« ÀåÁ¡ÀÌ ÀÖ½À´Ï´Ù.
-// ¹®¹ıÀº ´ÙÀ½°ú °°½À´Ï´Ù.
-//		class ÀÚ½ÄÅ¬·¡½º : Á¢±ÙÁ¦¾îÀÚ ºÎ¸ğÅ¬·¡½º { }
+// * ìƒì† *
+// ë¶€ëª¨ë¡œ ë¶€í„° ìƒì†ë°›ì€ ê¸°ëŠ¥ì„ ê·¸ëŒ€ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+// ì´ëŠ” ê°ì²´ë¼ëŠ” ê°œë…ì ìœ¼ë¡œë„ í›Œë¥­í•˜ì§€ë§Œ, ì½”ë“œë¥¼ ì¬ì‚¬ìš© í•  ìˆ˜ ìˆë‹¤ëŠ”ë° ì•„ì£¼ í° ì¥ì ì´ ìˆìŠµë‹ˆë‹¤.
+// ë¬¸ë²•ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.
+//		class ìì‹í´ë˜ìŠ¤ : ì ‘ê·¼ì œì–´ì ë¶€ëª¨í´ë˜ìŠ¤ { }
 
 class Human {
 protected:
-	string name;
+    string name;
 public:
-	Human() {}
-	Human(string name) {
-		this->name = name;
-	}
-	string act() {
-		return name;
-	}
+    Human() {}
+    Human(string name) {
+        this->name = name;
+    }
+    string act() {
+        return name;
+    }
 };
 
 class Wizard : public Human {
 private:
-	string magic;
+    string magic;
 public:
-	Wizard(string name, string magic) {
-		this->name = name;
-		this->magic = magic;
-	}
-	string spell() {
-		return magic;
-	}
+    Wizard(string name, string magic) {
+        this->name = name;
+        this->magic = magic;
+    }
+    string spell() {
+        return magic;
+    }
 };
 
 int main()
 {
-	Wizard me("¹ı»ç", "È­ÀÌ¾îº¼");
+    Wizard me("ë²•ì‚¬", "í™”ì´ì–´ë³¼");
 
-	cout << me.act() << " > " << me.spell() << endl;
+    cout << me.act() << " > " << me.spell() << endl;
 }

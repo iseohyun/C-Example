@@ -1,16 +1,21 @@
-﻿#include <iostream>
+﻿// Generalization(일반화) : 두 클래스가 상속관계(세대:Generation)에 있음
 
-class A {
+using namespace std;
+#include <iostream>
+#include <string>
+
+class A
+{
 protected:
-    char object;
+    string str = "Class A";
 };
 
-class B : public A {
-private:
-    char option = 'B';
+class B : public A
+{
 public:
-    void run() {
-        std::cout << object << option;
+    void run()
+    {
+        std::cout << "Class B: " << str << endl;
     }
 };
 

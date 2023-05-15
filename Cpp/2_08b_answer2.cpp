@@ -3,58 +3,67 @@
 #include "animal1.h"
 using namespace std;
 
-class flyable {
-public:
-	virtual void flying(string name) = 0;
-	virtual void landing(string name) = 0;
-};
-
-class runable {
-public:
-	static void sprint(string name) {
-		cout << name << "ÀÌ Àü·ÂÁúÁÖÇÕ´Ï´Ù." << endl;
-	}
-};
-
-class Dog : public Animal, public runable {
-public:
-	Dog(string name, string voice) {
-		this->setName(name);
-		this->setVoice(voice);
-	}
-	void crying() {
-		cout << getName() << "ÀÌ " << getVoice() << "ÇÏ°í Â¢½À´Ï´Ù." << endl;
-	}
-
-	void run() {
-		sprint(getName());
-	}
-};
-
-class Birds : public Animal, public flyable {
-public:
-	Birds(string name) {
-		setName(name);
-	}
-	void flying(string name) {
-		cout << name << "ÀÌ ³¯¾Æ°©´Ï´Ù." << endl;
-	}
-	void landing(string name) {
-		cout << name << "ÀÌ ÂøÁöÇÕ´Ï´Ù." << endl;
-	}
-};
-
-
-
-void main()
+class flyable
 {
-	Dog bulldog("ºÒµ¶", "ÄÈÄÈ");
-	bulldog.crying();
+public:
+    virtual void flying(string name) = 0;
+    virtual void landing(string name) = 0;
+};
 
-	Birds chicken("Ä¡Å²");
-	chicken.flying(chicken.getName());
-	chicken.landing(chicken.getName());
+class runable
+{
+public:
+    static void sprint(string name)
+    {
+        cout << name << "ì´ ì „ë ¥ì§ˆì£¼í•©ë‹ˆë‹¤." << endl;
+    }
+};
 
-	runable::sprint("Ç¥¹ü");
-	bulldog.run();
+class Dog : public Animal, public runable
+{
+public:
+    Dog(string name, string voice)
+    {
+        this->setName(name);
+        this->setVoice(voice);
+    }
+    void crying()
+    {
+        cout << getName() << "ì´ " << getVoice() << "í•˜ê³  ì§–ìŠµë‹ˆë‹¤." << endl;
+    }
+
+    void run()
+    {
+        sprint(getName());
+    }
+};
+
+class Birds : public Animal, public flyable
+{
+public:
+    Birds(string name)
+    {
+        setName(name);
+    }
+    void flying(string name)
+    {
+        cout << name << "ì´ ë‚ ì•„ê°‘ë‹ˆë‹¤." << endl;
+    }
+    void landing(string name)
+    {
+        cout << name << "ì´ ì°©ì§€í•©ë‹ˆë‹¤." << endl;
+    }
+};
+
+int main()
+{
+    Dog bulldog("ë¶ˆë…", "ì»¹ì»¹");
+    bulldog.crying();
+
+    Birds chicken("ì¹˜í‚¨");
+    chicken.flying(chicken.getName());
+    chicken.landing(chicken.getName());
+
+    runable::sprint("í‘œë²”");
+    bulldog.run();
 }

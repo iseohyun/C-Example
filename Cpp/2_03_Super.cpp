@@ -1,38 +1,39 @@
+// * super *
+// superí‚¤ì›Œë“œëŠ” ìƒìœ„ í´ë¼ìŠ¤ì˜ ë‚´ìš©ì„ ë°›ì•„ ì˜¬ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+
 using namespace std;
 #include <iostream>
 #include <string>
 
-// * super *
-// superÅ°¿öµå´Â »óÀ§ Å¬¶ó½ºÀÇ ³»¿ëÀ» ¹Ş¾Æ ¿Ã ¼ö ÀÖ½À´Ï´Ù.
-
 class Human {
 protected:
-	string name = "¸Ó±Û";
+    string name = "ë¨¸ê¸€";
 public:
-	Human() {}
-	Human(string name) {
-		this->name = name;
-	}
-	string act() {
-		return name;
-	}
+    Human() {}
+    Human(string name) {
+        this->name = name;
+    }
+    string act() {
+        return name;
+    }
 };
 
 class Wizard : public Human {
 private:
-	string name = "¹ı»ç";
-	string magic;
+    string name = "ë²•ì‚¬";
+    string magic;
 public:
-	Wizard(string magic) {
-		this->magic = magic;
-	}
-	string act() {
-		return __super::name + " > " + magic;
-	}
+    Wizard(string magic) {
+        this->magic = magic;
+    }
+    string act() {
+        // return __super::name + " > " + magic; // Visual Studio ì˜ˆì•½ì–´
+        return Human::name + " > " + magic; // GDB ìŠ¤íƒ€ì¼
+    }
 };
 
 int main()
 {
-	Wizard me("È­ÀÌ¾îº¼");
-	cout << me.act() << endl;
+    Wizard me("í™”ì´ì–´ë³¼");
+    cout << me.act() << endl;
 }

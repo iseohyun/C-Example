@@ -1,14 +1,14 @@
+// * this *
+// thisëŠ” ìê¸° ìì‹ ì˜ ì£¼ì†Œë¥¼ ë°˜í™˜í•©ë‹ˆë‹¤.
+// ì£¼ì„ì²˜ë¦¬ëœ ë¶€ë¶„ì˜ ì£¼ì„ì„ ì‚­ì œí•˜ê³ , ì–´ë–»ê²Œ ê²°ê³¼ê°€ ë‹¬ë¼ì§€ëŠ”ì§€ í™•ì¸í•´ ë´…ë‹ˆë‹¤.
+
 using namespace std;
 #include <iostream>
 #include <string>
 
-// * this *
-// this´Â ÀÚ±â ÀÚ½ÅÀÇ ÁÖ¼Ò¸¦ ¹İÈ¯ÇÕ´Ï´Ù.
-// ÁÖ¼®Ã³¸®µÈ ºÎºĞÀÇ ÁÖ¼®À» »èÁ¦ÇÏ°í, ¾î¶»°Ô °á°ú°¡ ´Ş¶óÁö´ÂÁö È®ÀÎÇØ º¾´Ï´Ù.
-
 class Human {
 private:
-	string name = "¸Ó±Û";
+	string name = "ë¨¸ê¸€";
 public:
 	string getName() {
 		return name;
@@ -23,7 +23,7 @@ public:
 int main()
 {
 	Human me;
-	me.setName("È£ºø");
+	me.setName("í˜¸ë¹—");
 
-	cout << "ÀÌ¸§ : " << me.getName() << endl;
+	cout << "ì´ë¦„ : " << me.getName() << endl;
 }

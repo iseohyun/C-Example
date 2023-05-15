@@ -2,34 +2,50 @@ using namespace std;
 #include <iostream>
 #include <string>
 
-// * ¿¬»êÀÚ ¿À¹ö·Îµù *
-// ¿¬»êÀÚ ¿À¹ö·ÎµùÀº ¿¬»êÀÚ¸¦ ÀçÁ¤ÀÇ ÇÏ´Â ÀÛ¾÷À» ÇÕ´Ï´Ù.
-// °´Ã¼±¸Á¶¿¡¼­ Ãß»óÈ­ µÈ °´Ã¼¿¡°Ô °ü½ÀÀûÀ¸·Î ¿ä±¸µÇ´Â ¿¬»êÀ» ÀçÁ¤ÀÇÇÔÀ¸·Î½á
-// °´Ã¼¸¦ ´õ À¯¿¬ÇÏ°Ô »ç¿ëÇÒ ¼ö ÀÖµµ·Ï µµ¿ÍÁÝ´Ï´Ù.
-// 
-// ~c ¸¦ ÀÔ·ÂÇßÀ» ¶§, ID°¡ Ãâ·ÂµÇµµ·Ï ¸¸µé¾î º¾½Ã´Ù.
+// * ì—°ì‚°ìž ì˜¤ë²„ë¡œë”© *
+// ì—°ì‚°ìž ì˜¤ë²„ë¡œë”©ì€ ì—°ì‚°ìžë¥¼ ìž¬ì •ì˜ í•˜ëŠ” ìž‘ì—…ì„ í•©ë‹ˆë‹¤.
+// ê°ì²´êµ¬ì¡°ì—ì„œ ì¶”ìƒí™” ëœ ê°ì²´ì—ê²Œ ê´€ìŠµì ìœ¼ë¡œ ìš”êµ¬ë˜ëŠ” ì—°ì‚°ì„ ìž¬ì •ì˜í•¨ìœ¼ë¡œì¨
+// ê°ì²´ë¥¼ ë” ìœ ì—°í•˜ê²Œ ì‚¬ìš©í•  ìˆ˜ ìžˆë„ë¡ ë„ì™€ì¤ë‹ˆë‹¤.
+//
+// ~c ë¥¼ ìž…ë ¥í–ˆì„ ë•Œ, IDê°€ ì¶œë ¥ë˜ë„ë¡ ë§Œë“¤ì–´ ë´…ì‹œë‹¤.
 
-class Human {
+class Human
+{
 private:
-	string name;
-public:
-	Human(string name) {
-		this->name = name;
-	}
-	string operator+() {
-		return name;
-	}
+    string name;
 
-	void operator<<(string name) {
-		this->name = name;
-	}
+public:
+    Human(string name)
+    {
+        this->name = name;
+    }
+    string operator+()
+    {
+        return name;
+    }
+
+    Human operator+(Human human)
+    {
+        Human *newHuman = new Human(human);
+        newHuman->name = this->name + "+" + newHuman->name;
+        return *newHuman;
+    }
+
+    void operator<<(string name)
+    {
+        this->name = name;
+    }
 };
 
 int main()
 {
-	Human me("¸Ó±Û");
-	cout << "ÀÌ¸§ : " << +me << endl;
+    Human me("ë¨¸ê¸€");
+    cout << "ì´ë¦„ : " << +me << endl;
 
-	me << "È£ºø";
-	cout << "ÀÌ¸§ : " << +me << endl;
+    me << "í˜¸ë¹—";
+    cout << "ë³€ê²½ëœ ì´ë¦„ : " << +me << endl;
+
+    Human you("ì˜¤í¬");
+    me = me + you;
+    cout << "ê²°í•©ëœ ì´ë¦„ : " << +me << endl;
 }

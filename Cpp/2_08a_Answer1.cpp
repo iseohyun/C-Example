@@ -2,50 +2,64 @@
 #include <string>
 using namespace std;
 
-class Avatar {
+class Avatar
+{
 protected:
     string name = "Tim";
+
 public:
     Avatar() {}
-    Avatar(string name) {
+    Avatar(string name)
+    {
         this->name = name;
     }
 
-    string getName() {
+    string getName()
+    {
         return name;
     }
 
-    void setName(string name) {
+    void setName(string name)
+    {
         this->name = name;
     }
 };
 
-class newAvatar : public Avatar {
+class newAvatar : public Avatar
+{
 public:
     string skill = "not yet";
-    newAvatar() {
+    newAvatar()
+    {
         setName(getName() + "(v2)");
     }
-    newAvatar(string name) {
-        __super::name = name + "(v2)";
+    newAvatar(string name)
+    {
+        //__super::name = name + "(v2)"; // Visual Studio Style
+        Avatar::name = name + "(v2)"; // GDB Style
     }
-    virtual string action() {
+    virtual string action()
+    {
         return skill;
     }
 };
 
-class allNewAvatar : public newAvatar {
+class allNewAvatar : public newAvatar
+{
 public:
     string skill = "heal";
-    string action() {
+    string action()
+    {
         return skill;
     }
-    string action2() {
-        return __super::skill;
+    string action2()
+    {
+        // return __super::skill; // Visual Studio Style
+        return newAvatar::skill; // GDB Style
     }
 };
 
-int _main()
+int main()
 {
     Avatar my("torr");
     my.setName("jun");
@@ -60,8 +74,6 @@ int _main()
     cout << allMy.action() << endl;
     cout << allMy.action2() << endl;
 
-    newAvatar* p = &allMy;
+    newAvatar *p = &allMy;
     cout << p->action();
-
-    return 1;
 }

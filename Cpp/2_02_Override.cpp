@@ -1,43 +1,43 @@
+// * Override *
+// ìƒì†ì—ì„œ ê¸°ì–µí•´ì•¼ í•  ê°€ìž¥ ì¤‘ìš”í•œ ê¸°ëŠ¥ìž…ë‹ˆë‹¤.
+// ìžì‹ ë…¸ë“œëŠ” ë¶€ëª¨ì˜ ëª¨ë“  ê¸°ëŠ¥ì„ ìƒì†ë°›ìŠµë‹ˆë‹¤.
+// ë”°ë¼ì„œ, ì†ì£¼, ì¦ì†ì£¼ ê¸°ëŠ¥ì€ ê·¸ ê¸°ëŠ¥ì´ ê³„ì† ë°©ëŒ€í•´ ì§ˆ ê²ƒì´ê³ , ê¸°ì–µí•´ì•¼í•˜ëŠ” ê¸°ëŠ¥(ì¸í„°íŽ˜ì´ìŠ¤)ë„ ëŠ˜ì–´ë‚  ê²ƒìž…ë‹ˆë‹¤.
+// ë„ˆë¬´ ë§Žì€ ê¸°ëŠ¥ì€ ì½”ë“œë¥¼ ì‚¬ìš©/ìž¬ì‚¬ìš©í•˜ëŠ”ë° ê±¸ë¦¼ëŒì´ ë©ë‹ˆë‹¤.
+// ë”°ë¼ì„œ, ì´ë¦„ì´ ê°™ì€ í•¨ìˆ˜ë¥¼ ìž¬ì •ì˜ í•¨ìœ¼ë¡œì¨, ê¸°ëŠ¥ í–¥ìƒì„ ë…¸ë¦¬ëŠ” ê²ƒì„ Overridingì´ë¼ê³  í•©ë‹ˆë‹¤.
+
 using namespace std;
 #include <iostream>
 #include <string>
 
-// * Override *
-// »ó¼Ó¿¡¼­ ±â¾ïÇØ¾ß ÇÒ °¡Àå Áß¿äÇÑ ±â´ÉÀÔ´Ï´Ù.
-// ÀÚ½Ä ³ëµå´Â ºÎ¸ðÀÇ ¸ðµç ±â´ÉÀ» »ó¼Ó¹Þ½À´Ï´Ù.
-// µû¶ó¼­, ¼ÕÁÖ, Áõ¼ÕÁÖ ±â´ÉÀº ±× ±â´ÉÀÌ °è¼Ó ¹æ´ëÇØ Áú °ÍÀÌ°í, ±â¾ïÇØ¾ßÇÏ´Â ±â´É(ÀÎÅÍÆäÀÌ½º)µµ ´Ã¾î³¯ °ÍÀÔ´Ï´Ù.
-// ³Ê¹« ¸¹Àº ±â´ÉÀº ÄÚµå¸¦ »ç¿ë/Àç»ç¿ëÇÏ´Âµ¥ °É¸²µ¹ÀÌ µË´Ï´Ù.
-// µû¶ó¼­, ÀÌ¸§ÀÌ °°Àº ÇÔ¼ö¸¦ ÀçÁ¤ÀÇ ÇÔÀ¸·Î½á, ±â´É Çâ»óÀ» ³ë¸®´Â °ÍÀ» OverridingÀÌ¶ó°í ÇÕ´Ï´Ù.
-
 class Human {
 protected:
-	string name;
+    string name;
 public:
-	Human() {}
-	Human(string name) {
-		this->name = name;
-	}
-	string act() {
-		return name;
-	}
+    Human() {}
+    Human(string name) {
+        this->name = name;
+    }
+    string act() {
+        return name;
+    }
 };
 
 class Wizard : public Human {
 private:
-	string name = "¹ý»ç";
-	string magic;
+    string name = "ë²•ì‚¬";
+    string magic;
 public:
-	Wizard(string magic) {
-		this->magic = magic;
-	}
-	string act() {
-		return name + " > " + magic;
-	}
+    Wizard(string magic) {
+        this->magic = magic;
+    }
+    string act() {
+        return name + " > " + magic;
+    }
 };
 
 int main()
 {
-	Wizard me("È­ÀÌ¾îº¼");
+    Wizard me("í™”ì´ì–´ë³¼");
 
-	cout << me.act() << endl;
+    cout << me.act() << endl;
 }

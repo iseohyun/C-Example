@@ -1,34 +1,37 @@
 #include <iostream>
 using namespace std;
 
-// * Å¬·¡½ºÀÇ ÇÁ·ÎÅäÅ¸ÀÔ *
-// Å¬·¡½ºÀÇ ÇÁ·ÎÅäÅ¸ÀÔÀ» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. ¹®¹ıÀº ¾Æ·¡¿Í °°½À´Ï´Ù.
-//		class A;	<- ÇÁ·ÎÅäÅ¸ÀÔ
+// * í´ë˜ìŠ¤ì˜ í”„ë¡œí† íƒ€ì… *
+// í´ë˜ìŠ¤ì˜ í”„ë¡œí† íƒ€ì…ì„ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. ë¬¸ë²•ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.
+//		class A;	<- í”„ë¡œí† íƒ€ì…
 //		class B { A a; };
 //		class A {};
-// ÁÖÀÇ : Å¬·¡½º ¾È¿¡¼­´Â ÇÁ·ÎÅä Å¸ÀÔÀ¸·Î »ç¿ëÇÒ ¼ö ÀÖÁö¸¸, mainÇÔ¼öº¸´Ù´Â À§¿¡ ÀÖ¾î¾ß ÇÕ´Ï´Ù.
+// ì£¼ì˜ : í´ë˜ìŠ¤ ì•ˆì—ì„œëŠ” í”„ë¡œí†  íƒ€ì…ìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆì§€ë§Œ, mainí•¨ìˆ˜ë³´ë‹¤ëŠ” ìœ„ì— ìˆì–´ì•¼ í•©ë‹ˆë‹¤.
 
-class A;	// ÇÁ·ÎÅäÅ¸ÀÔ
-class B {
-public: A* a;
-	  B(A* aa) { a = aa; }
-};
-//class B2 { public: A a; };
-
-class A {
+class A; // í”„ë¡œí† íƒ€ì…
+class B
+{
 public:
-	int ID = 0;
-	B b = B(this);
+    A *a;
+    B(A *aa) { a = aa; }
+};
+// class B2 { public: A a; };
+
+class A
+{
+public:
+    int ID = 0;
+    B b = B(this);
 };
 
 int main()
 {
-	A a;
-	B b(&a);
+    A a;
+    B b(&a);
 
-	b.a->ID = 99;
-	cout << a.ID << endl;
+    b.a->ID = 99;
+    cout << a.ID << endl;
 
-	a.b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->ID = 55;
-	cout << a.ID << endl;
+    a.b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->b.a->ID = 55;
+    cout << a.ID << endl;
 }

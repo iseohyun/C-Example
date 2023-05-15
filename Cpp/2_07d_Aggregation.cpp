@@ -1,32 +1,41 @@
-﻿#include <iostream>
+﻿// 집합(Aggregation)
+// b가 사라지더라도, a는 없어지지 않는다.
 
-// 집합
-// b가 사라지더라도, a는 없어지지 않는다. 
+using namespace std;
+#include <iostream>
+#include <string>
 
-class A {
+class A
+{
 private:
-    char object;
+    string str;
+
 public:
-    A(char object) {
-        this->object = object;
+    A(string str)
+    {
+        this->str = str;
     }
-    char getObj() {
-        return object;
+    string getStr()
+    {
+        return str;
     }
 };
 
-class B {
+class B
+{
 public:
-    A* a;
+    A *a;
+
 public:
-    void run() {
-        std::cout << a->getObj();
+    void run()
+    {
+        std::cout << a->getStr() << endl;
     }
 };
 
 int main()
 {
-    A a1('C'), a2('O');
+    A a1("first"), a2("Second");
     {
         B b;
         b.a = &a1;

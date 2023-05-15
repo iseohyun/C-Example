@@ -1,44 +1,44 @@
+// * ìƒì„±ìž *
+// í´ëž˜ìŠ¤ëª…ê³¼ ë™ì¼í•œ ì´ë¦„ì˜ ë©¤ë²„í•¨ìˆ˜ë¥¼ ìƒì„±ìžë¼ê³  í•©ë‹ˆë‹¤.
+// ìƒì„±ìžëŠ” í´ëž˜ìŠ¤ê°€ ì„ ì–¸ë¨ê³¼ ë™ì‹œì— ìžë™ìœ¼ë¡œ ì‹¤í–‰ì´ ë©ë‹ˆë‹¤.
+// ìƒì„±ìžë„ ì˜¤ë²„ë¡œë”©(Overloading)ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+//
+// * ì†Œë©¸ìž *
+// ì†Œë©¸ìžëŠ” í´ëž˜ìŠ¤ê°€ ì†Œë©¸ë  ë•Œ ìžë™ìœ¼ë¡œ í˜¸ì¶œë©ë‹ˆë‹¤.
+// ë¡œê·¸ë‚˜ ë©”ëª¨ë¦¬í•´ì œ ë“± ì†Œí™€í•  ìˆ˜ ìžˆëŠ” ìž‘ì—…ì„ ìˆ˜í–‰í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+// ë¬¸ë²•ì€ ì•„ëž˜ì™€ ê°™ìŠµë‹ˆë‹¤ :
+//		~í´ëž˜ìŠ¤ëª…()
+//		í´ëž˜ìŠ¤ëª…::í´ëž˜ìŠ¤ëª…() { ë‚´ìš©; }
+//
+
 using namespace std;
 #include <iostream>
 #include <string>
 
-// * »ý¼ºÀÚ *
-// Å¬·¡½º¸í°ú µ¿ÀÏÇÑ ÀÌ¸§ÀÇ ¸â¹öÇÔ¼ö¸¦ »ý¼ºÀÚ¶ó°í ÇÕ´Ï´Ù.
-// »ý¼ºÀÚ´Â Å¬·¡½º°¡ ¼±¾ðµÊ°ú µ¿½Ã¿¡ ÀÚµ¿À¸·Î ½ÇÇàÀÌ µË´Ï´Ù.
-// »ý¼ºÀÚµµ ¿À¹ö·Îµù(Overloading)ÀÌ °¡´ÉÇÕ´Ï´Ù.
-//
-// * ¼Ò¸êÀÚ *
-// ¼Ò¸êÀÚ´Â Å¬·¡½º°¡ ¼Ò¸êµÉ ¶§ ÀÚµ¿À¸·Î È£ÃâµË´Ï´Ù.
-// ·Î±×³ª ¸Þ¸ð¸®ÇØÁ¦ µî ¼ÒÈ¦ÇÒ ¼ö ÀÖ´Â ÀÛ¾÷À» ¼öÇàÇÒ ¼ö ÀÖ½À´Ï´Ù.
-// ¹®¹ýÀº ¾Æ·¡¿Í °°½À´Ï´Ù :
-//		~Å¬·¡½º¸í()
-//		Å¬·¡½º¸í::Å¬·¡½º¸í() { ³»¿ë; }
-//
-
 class Human {
 private:
-	string name;
+    string name;
 public:
-	Human(string name) {
-		this->name = name;
-	}
+    Human(string name) {
+        this->name = name;
+    }
 
-	~Human() {
-		cout << "¼Ò¸ê µÊ" << endl;
-	}
+    ~Human() {
+        cout << "ì†Œë©¸ ë¨" << endl;
+    }
 
-	string getName() {
-		return name;
-	}
+    string getName() {
+        return name;
+    }
 
-	void setName(string name) {
-		this->name = name;
-	}
+    void setName(string name) {
+        this->name = name;
+    }
 };
 
 int main()
 {
-	Human me("È£ºø");
+    Human me("í˜¸ë¹—");
 
-	cout << "ÀÌ¸§ : " << me.getName() << endl;
+    cout << "ì´ë¦„ : " << me.getName() << endl;
 }

@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿// Composition(복합;조립)
+#include <iostream>
 
 class A {
 public:

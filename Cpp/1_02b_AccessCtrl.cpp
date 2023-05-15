@@ -1,19 +1,19 @@
-#include <iostream>
-using namespace std;
-
-// * »ó¼Ó°ú Á¢±ÙÁ¦¾îÀÚ *
-// »ó¼ÓÀÇ Á¢±ÙÁ¦¾îÀÚ´Â ¾Æ·¡ÀÇ ¹®¹ı°ú °°½À´Ï´Ù.
-//		class Å¬·¡½º¸í : Å¬·¡½ºÁ¢±ÙÁ¦¾îÀÚ ¿øÁ¶Å¬·¡½º
+// * ìƒì†ê³¼ ì ‘ê·¼ì œì–´ì *
+// ìƒì†ì˜ ì ‘ê·¼ì œì–´ìëŠ” ì•„ë˜ì˜ ë¬¸ë²•ê³¼ ê°™ìŠµë‹ˆë‹¤.
+//		class í´ë˜ìŠ¤ëª… : í´ë˜ìŠ¤ì ‘ê·¼ì œì–´ì ì›ì¡°í´ë˜ìŠ¤
 //
-// ¿øÁ¶ Å¬·¡½º¿¡¼­ »ç¿ëÇÑ Á¢±ÙÁ¦¾îÀÚ¸¦ ÃÖ¼Ò Á¢±ÙÁ¦¾î¸¦ ¾îµğ±îÁö Çã¿ëÇÒ °ÍÀÎÁö¸¦ ¼­¼úÇÕ´Ï´Ù.
-// ¿¹Á¦ :
+// ì›ì¡° í´ë˜ìŠ¤ì—ì„œ ì‚¬ìš©í•œ ì ‘ê·¼ì œì–´ìë¥¼ ìµœì†Œ ì ‘ê·¼ì œì–´ë¥¼ ì–´ë””ê¹Œì§€ í—ˆìš©í•  ê²ƒì¸ì§€ë¥¼ ì„œìˆ í•©ë‹ˆë‹¤.
+// ì˜ˆì œ :
 //	   Root <- Child1 : public		<- Grand1
 //			<- Child2 : protected	<- Grnad2
 //			<- Child2 : private		<- Grnad3
 //
-//	¿¹¸¦µé¾î, pub()ÇÔ¼ö´Â ¿ø·¡ publicÀÌ¾úÁö¸¸,
-//		child2¿¡¼­ ÃÖ¼Ò protected·Î »ó¼Ó ¹Ş¾Ò±â ¶§¹®¿¡, pubÀº protectedÀÇ Á¢±ÙÁ¦¾î·Î ¹Ù²î°Ô µË´Ï´Ù.
+//	ì˜ˆë¥¼ë“¤ì–´, pub()í•¨ìˆ˜ëŠ” ì›ë˜ publicì´ì—ˆì§€ë§Œ,
+//		child2ì—ì„œ ìµœì†Œ protectedë¡œ ìƒì† ë°›ì•˜ê¸° ë•Œë¬¸ì—, pubì€ protectedì˜ ì ‘ê·¼ì œì–´ë¡œ ë°”ë€Œê²Œ ë©ë‹ˆë‹¤.
 //
+
+#include <iostream>
+using namespace std;
 
 class Root {
 private:
@@ -26,39 +26,39 @@ public:
 
 class Child1 : public Root {
 public:
-	//void showPriv() { priv(); } // ºÒ°¡´É
+	//void showPriv() { priv(); } // ë¶ˆê°€ëŠ¥
 	void showProt() { prot(); }
 	void showPub() { pub(); }
 };
 
 class Child2 : protected Root {
-	//void showPriv() { priv(); } // ºÒ°¡´É
+	//void showPriv() { priv(); } // ë¶ˆê°€ëŠ¥
 	void showProt() { prot(); }
 	void showPub() { pub(); }
 };
 
 class Child3 : private Root {
-	//void showPriv() { priv(); } // ºÒ°¡´É
+	//void showPriv() { priv(); } // ë¶ˆê°€ëŠ¥
 	void showProt() { prot(); }
 	void showPub() { pub(); }
 };
 
 class Grand1 : public Child1 {
-	//void showPriv() { priv(); } // ºÒ°¡´É
+	//void showPriv() { priv(); } // ë¶ˆê°€ëŠ¥
 	void showProt() { prot(); }
 	void showPub() { pub(); }
 };
 
 class Grand2 : public Child2 {
-	//void showPriv() { priv(); } // ºÒ°¡´É
+	//void showPriv() { priv(); } // ë¶ˆê°€ëŠ¥
 	void showProt() { prot(); }
 	void showPub() { pub(); }
 };
 
 class Grand3 : public Child3 {
-	//void showPriv() { priv(); } // ºÒ°¡´É
-	//void showProt() { prot(); } // ºÒ°¡´É
-	//void showPub() { pub(); } // ºÒ°¡´É
+	//void showPriv() { priv(); } // ë¶ˆê°€ëŠ¥
+	//void showProt() { prot(); } // ë¶ˆê°€ëŠ¥
+	//void showPub() { pub(); } // ë¶ˆê°€ëŠ¥
 };
 
 int main()
@@ -68,6 +68,6 @@ int main()
 	Child3 c3;
 
 	c1.pub();
-	// c2.pub();	// Child2°¡ ÃÖ¼Ò Á¶°ÇÀ» prrotected·Î ¹Ù²ã¹ö¸²
-	// c3.pub();	// Child3°¡ ÃÖ¼Ò Á¶°ÇÀ» private·Î ¹Ù²ã¹ö¸²
+	// c2.pub();	// Child2ê°€ ìµœì†Œ ì¡°ê±´ì„ prrotectedë¡œ ë°”ê¿”ë²„ë¦¼
+	// c3.pub();	// Child3ê°€ ìµœì†Œ ì¡°ê±´ì„ privateë¡œ ë°”ê¿”ë²„ë¦¼
 }
