@@ -1,6 +1,6 @@
 ﻿/**
 * 출처 : Microsoft, Docs / Microsoft C++, C 및 어셈블러 / Windows / 연습: Windows 데스크톱 애플리케이션 만들기
-*	https://docs.microsoft.com/ko-kr/cpp/windows/walkthrough-creating-windows-desktop-applications-cpp?view=msvc-160
+*	https://docs.microsoft.com/ko-kr/cpp/windows/walkthrough-creating-windows-desktop-applications-cpp
 */
 
 #include <windows.h>
