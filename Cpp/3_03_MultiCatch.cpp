@@ -1,11 +1,11 @@
+/*
+*  ì˜ˆì™¸ : ì—¬ëŸ¬íƒ€ìž…ìœ¼ë¡œ ì²˜ë¦¬í•˜ê¸°
+*   exceptionë°œìƒ íƒ€ìž…ì— ë”°ë¼ì„œ ì—¬ëŸ¬í˜•íƒœë¡œ ë°›ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+*/
+
 #include <iostream>
 #include <stdexcept>
 using namespace std;
-
-/*
-*  ¿¹¿Ü : ¿©·¯Å¸ÀÔÀ¸·Î Ã³¸®ÇÏ±â
-*   exception¹ß»ý Å¸ÀÔ¿¡ µû¶ó¼­ ¿©·¯ÇüÅÂ·Î ¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù.
-*/
 
 void func(int mode) {
     switch (mode) {

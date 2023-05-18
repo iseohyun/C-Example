@@ -1,10 +1,7 @@
+// í•¨ìˆ˜ì—ì„œ templateë¥¼ ì‚¬ìš©í•˜ëŠ” ë°©ë²•ì…ë‹ˆë‹¤.
+
 #include <iostream>
 using namespace std;
-
-// * template *
-// ±âÁ¸¿¡ ÇÔ¼ö ¿À¹ö·Îµù(overloading)ÀÌ º¯¼öÇü¿¡ ÀÇÇÑ °ÍÀÌ¾ú´Ù¸é,
-// template´Â ¹«ÇüÀÇ º¯¼öÇüÀ» ÁöÁ¤ÇÏ°í, ±×¿¡ ¸Â´Â ÇüÅÂÀÇ ÇÔ¼ö°¡ ºôµå µÇ´Â °ÍÀ» Áö¿øÇÕ´Ï´Ù.
-// 
 
 template <typename T>
 void Swap(T& a, T& b);
@@ -14,45 +11,49 @@ void Swap<double>(double&, double&);
 
 int main()
 {
-	int a = 3, b = 5;
-	Swap(a, b);
-	cout << "a : " << a << ", b : " << b << endl;
+    // Swapí•¨ìˆ˜ì—ëŠ” ëª¨ë“  íƒ€ì…ì„ ì¸ìë¡œ ë„˜ê²¨ ì¤„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+    int a = 3, b = 5;
+    Swap(a, b);	// int íƒ€ì…ì˜ ì¸ìë¥¼ ë„˜ê²¨ì¤ë‹ˆë‹¤.
+    cout << "a : " << a << ", b : " << b << endl;
 
-	string x = "Origin", y = "imitation";
-	Swap(x, y);
-	cout << "x : " << x << ", y : " << y << endl;
+    string x = "Origin", y = "imitation";
+    Swap(x, y); // string íƒ€ì…ì˜ ì¸ìë¥¼ ë„˜ê²¨ì¤ë‹ˆë‹¤.
+    cout << "x : " << x << ", y : " << y << endl;
 
-	double i = 3.14, j = 9.8;
-	Swap(i, j);
-	cout << "i : " << i << ", j : " << j << endl;
+
+    // double typeì˜ ì¸ìëŠ” ì¶”ê°€ë¡œ ì •ì˜í•˜ì˜€ê¸° ë•Œë¬¸ì—, ì´ ë•ŒëŠ” Swap<double>ì„ í˜¸ì¶œí•©ë‹ˆë‹¤.
+    double i = 3.14, j = 9.8;
+    Swap(i, j);
+    cout << "i : " << i << ", j : " << j << endl;
 }
 
 template <typename T>
 void Swap(T& a, T& b) {
-	T tmp = a;
-	a = b;
-	b = tmp;
+    T tmp = a;
+    a = b;
+    b = tmp;
 }
 
 template <>
 void Swap<double>(double&, double&) {
-	// ¾Æ¹«°Íµµ ÇÏÁö ¾ÊÀ½
+    // ë©”ì‹œì§€ë§Œ ì¶œë ¥í•˜ê³  ì‹¤ì œë¡œ swapì€ ë™ì‘í•˜ì§€ ì•ŠìŒ.
+    cout << "double Swapì´ í˜¸ì¶œ ë¨" << endl;
 }
 
-// ½Ç½À°úÁ¦1:
+// ì‹¤ìŠµê³¼ì œ1:
 // 
-// ¾î¶² º¯¼öµç 2¹è°¡ µÇ´ÂÇÔ¼ö¸¦ ¸¸µé¾îº¸ÀÚ.
+// ì–´ë–¤ ë³€ìˆ˜ë“  2ë°°ê°€ ë˜ëŠ”í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ë³´ì.
 
 //		1 -> 2
 //		1.1 -> 2.2
-//		test -> testtest (stringÀÌ¿ë)
+//		test -> testtest (stringì´ìš©)
 
-// ½Ç½À°úÁ¦2: (4_01a_test1¿¡¼­ ÀÛ¼ºÇÏ¼¼¿ä.)
-//		°ÔÀÓÀ» ¸¸µå·Á°í ÇÕ´Ï´Ù. À¯´ÖÀº ·¹º§(lv)¿Í °æÇèÄ¡(exp)¸¦ °¡Áö°í ÀÖ½À´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ2: (4_01a_test1ì—ì„œ ì‘ì„±í•˜ì„¸ìš”.)
+//		ê²Œì„ì„ ë§Œë“œë ¤ê³  í•©ë‹ˆë‹¤. ìœ ë‹›ì€ ë ˆë²¨(lv)ì™€ ê²½í—˜ì¹˜(exp)ë¥¼ ê°€ì§€ê³  ìˆìŠµë‹ˆë‹¤.
 // 
-//		À¯´Ö 2°³¸¦ ´ÙÀ½ ÇÔ¼ö(UnitMerge)¸¦ ÀÌ¿ëÇÏ¿© ÇÕÄ¥ ¼ö ÀÖ½À´Ï´Ù.
-//			ÇÕÃÄÁö´Â µÎ À¯´ÖÀÇ °æÇèÄ¡´Â »ê¼úÇÕ(a+b)ÀÌ°í, 100À» ³Ñ¾î°¡¸é ·¹º§ÀÌ ¿Ã¶ó°©´Ï´Ù.
-//			¸¸¾à µÎ À¯´ÖÀÇ lvÀÌ °°´Ù°í ÇÏ¸é, ³ôÀº lv·Î ÇÕÃÄÁı´Ï´Ù.
+//		ìœ ë‹› 2ê°œë¥¼ ë‹¤ìŒ í•¨ìˆ˜(UnitMerge)ë¥¼ ì´ìš©í•˜ì—¬ í•©ì¹  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+//			í•©ì³ì§€ëŠ” ë‘ ìœ ë‹›ì˜ ê²½í—˜ì¹˜ëŠ” ì‚°ìˆ í•©(a+b)ì´ê³ , 100ì„ ë„˜ì–´ê°€ë©´ ë ˆë²¨ì´ ì˜¬ë¼ê°‘ë‹ˆë‹¤.
+//			ë§Œì•½ ë‘ ìœ ë‹›ì˜ lvì´ ê°™ë‹¤ê³  í•˜ë©´, ë†’ì€ lvë¡œ í•©ì³ì§‘ë‹ˆë‹¤.
 //
 //			template<typename T> T UnitMerge(T a) {
 //				return a + a;
@@ -60,33 +61,33 @@ void Swap<double>(double&, double&) {
 
 class UnitX {
 public:
-	char lv;
-	int exp = 1;
-	UnitX(int cls) {
-		this->lv = cls;
-	}
-	UnitX(int cls, int exp) {
-		this->lv = cls;
-		this->exp = exp;
-	}
-	UnitX operator+(UnitX t) {
-		UnitX x('A');
-		if (lv == t.lv) {
-			x.exp = exp + t.exp;
-			if (x.exp >= 100) {
-				x.lv = lv + 1;
-			}
-			else {
-				x.lv = lv;
-			}
-		}
-		else {
-			x.lv = lv > t.lv ? lv : t.lv;
-			x.exp = lv > t.lv ? exp : t.exp;
-		}
-		return x;
-	}
-	void show() {
-		cout << "Lv : " << lv << ", Exp. : " << exp << endl;
-	}
+    char lv;
+    int exp = 1;
+    UnitX(int cls) {
+        this->lv = cls;
+    }
+    UnitX(int cls, int exp) {
+        this->lv = cls;
+        this->exp = exp;
+    }
+    UnitX operator+(UnitX t) {
+        UnitX x('A');
+        if (lv == t.lv) {
+            x.exp = exp + t.exp;
+            if (x.exp >= 100) {
+                x.lv = lv + 1;
+            }
+            else {
+                x.lv = lv;
+            }
+        }
+        else {
+            x.lv = lv > t.lv ? lv : t.lv;
+            x.exp = lv > t.lv ? exp : t.exp;
+        }
+        return x;
+    }
+    void show() {
+        cout << "Lv : " << lv << ", Exp. : " << exp << endl;
+    }
 };

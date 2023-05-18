@@ -1,3 +1,5 @@
+// í´ë˜ìŠ¤ì—ì„œ templateë¥¼ ì‚¬ìš©í•˜ëŠ” ì˜ˆì œì…ë‹ˆë‹¤.
+
 #include <iostream>
 using namespace std;
 
@@ -11,7 +13,7 @@ public:
 	T get_data() { return data_; }
 };
 
-template <> class Data<double>	// doubleÇü¿¡ ´ëÇÑ ¸í½ÃÀû Æ¯¼öÈ­ 
+template <> class Data<double>	// doubleí˜•ì— ëŒ€í•œ ëª…ì‹œì  íŠ¹ìˆ˜í™” 
 {
 private:
 	double data_;
@@ -19,14 +21,14 @@ public:
 	Data(double dt) { data_ = dt; }
 	double get_data()
 	{
-		cout << "<double ¸í½ÃÈ­> ";
+		cout << "<double ëª…ì‹œí™”> ";
 		return data_;
 	}
 };
 
 int main(void)
 {
-	Data<string> A("¹®ÀÚ¿­..");
+	Data<string> A("ë¬¸ìì—´..");
 	Data<double> B(3.14);
 
 	cout << "A : " << A.get_data() << endl;

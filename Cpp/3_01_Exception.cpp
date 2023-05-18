@@ -1,36 +1,36 @@
+/* try... catch... throw
+* 1. ì—ëŸ¬ê°€ ë°œìƒí•  ê²ƒ ê°™ì€ í•¨ìˆ˜ë¥¼ ì‹¤í–‰í•  ë•Œ tryë¡œ ê°ì‹¸ì¤ë‹ˆë‹¤.
+* 2. ì—ëŸ¬ê°€ ë°œìƒí–ˆì„ ë•Œ, ì‹¤í–‰í•´ì•¼í•˜ëŠ” í•¨ìˆ˜ìž…ë‹ˆë‹¤.
+* 3. throwë¥¼ í†µí•´ì„œ ê°•ì œë¡œ ì´ë²¤íŠ¸ë¥¼ ë°œìƒ ì‹œí‚¬ ìˆ˜ë„ ìžˆìŠµë‹ˆë‹¤.
+*/
+
 #include <iostream>
 using namespace std;
 
-/* try... catch... throw
-* 1. ¿¡·¯°¡ ¹ß»ýÇÒ °Í °°Àº ÇÔ¼ö¸¦ ½ÇÇàÇÒ ¶§ try·Î °¨½ÎÁÝ´Ï´Ù.
-* 2. ¿¡·¯°¡ ¹ß»ýÇßÀ» ¶§, ½ÇÇàÇØ¾ßÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù.
-* 3. throw¸¦ ÅëÇØ¼­ °­Á¦·Î ÀÌº¥Æ®¸¦ ¹ß»ý ½ÃÅ³ ¼öµµ ÀÖ½À´Ï´Ù.
-*/
-
 void Func03() {
-	cout << "Func03 ½ÇÇà\n";
+    cout << "Func03 ì‹¤í–‰\n";
 }
 
 void Func02() {
-	string str = "Func02 ¿¹¿Ü ¹ß»ý";
-	throw str;
-	Func03();
+    string str = "Func02 ì˜ˆì™¸ ë°œìƒ";
+    throw str;
+    Func03();
 }
 
 void Func01() {
-	cout << "Func01 ½ÇÇà\n";
-	Func02();
+    cout << "Func01 ì‹¤í–‰\n";
+    Func02();
 }
 
 int main(void)
 {
-	try
-	{
-		Func01();
-	}
-	catch (string ex)
-	{
-		cout << "¿¹¿Ü Ã³¸®(main) : " << ex << endl;
-	}
-	return 0;
+    try
+    {
+        Func01();
+    }
+    catch (string ex)
+    {
+        cout << "ì˜ˆì™¸ ì²˜ë¦¬(main) : " << ex << endl;
+    }
+    return 0;
 }

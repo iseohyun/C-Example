@@ -9,6 +9,7 @@
                 "-g",
                 "${file}",
                 // "${fileDirname}\\include.cpp",
+                // "${fileDirname}\\NameSpaceEx.cpp",
                 "-lstdc++",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"

@@ -1,17 +1,18 @@
+/*
+ *
+ *   Й╦╟Л║╢Л≈░ a = 3;Л°╪К║° К▄─Л·┘М∙═ Л┬≤ Л·┬Л≈┬К▀╓К╘╢,
+ *   a(3)Л°╪К║°К▐└ К▄─Л·┘Л²╢ Й╟─К┼╔М∙≤К▀╓.
+ *
+ */
+
 #include <iostream>
 using namespace std;
 
-/* >> ╩У╥н©Н гЭебюг ╢Кют
-* ╠Ба╦©║ a = 3;ю╦╥н ╢Кютгр ╪Ж юж╬З╢ы╦И,
-* a(3)ю╦╥н╣╣ ╢Кютюл ╟║╢иго╢ы.
-*
-*/
-
 int main(void)
 {
-	int a(3);
-	cout << a << endl;
+    int a(3); // int a = 3;
+    cout << a << endl;
 
-	string name("MyName");
-	cout << name << endl;
+    string name("MyName"); // string name = "MyName"
+    cout << name << endl;
 }

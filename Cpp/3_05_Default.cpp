@@ -1,19 +1,20 @@
+/*
+ * > Default
+ * catchë¬¸ì—ì„œ ì—ëŸ¬ë¥¼ ì²˜ë¦¬í•˜ì§€ ì•Šìœ¼ë©´, ì—ëŸ¬ë¥¼ ì²˜ë¦¬í•˜ì§€ ì•Šì•„ì„œ ì˜ˆì™¸ê°€ ë°œìƒí•©ë‹ˆë‹¤.
+ * (ì˜ˆì œì—ì„œ 50, 51ì„ ì§€ìš°ë©´ ì—ëŸ¬ê°€ ë‚¨)
+ * ìƒì†ê´€ê³„ì— ë”°ë¼ì„œ ì§€ì •í•˜ì§€ ì•Šìœ¼ë©´ ìƒìœ„ ìƒì† ê°œì²´ê°€ ì´ë¥¼ ì²˜ë¦¬í•˜ëŠ” ê²½ìš°ë„ ìžˆì§€ë§Œ,
+ * ì˜ˆë¥¼ë“¤ì–´, case 2 : length_errorëŠ” catch(logit_error)ì—ì„œ ì²˜ë¦¬ í•¨
+ * ì´ë¥¼ ì‹ ê²½ì“°ì§€ ëª» í–ˆì„ ë•Œ, catch(...)ë¥¼ í†µí•´ì„œ í•´ê²° í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+ * ë‹¨ì ì´ë¼ë©´, ë³€ìˆ˜ë¥¼ ì²˜ë¦¬ í•˜ì§€ ëª»í•œë‹¤ëŠ” ê²ƒ
+ */
+
 #include <exception>
 #include <iostream>
 using namespace std;
 
-/*
-* > Default
-* catch¹®¿¡¼­ ¿¡·¯¸¦ Ã³¸®ÇÏÁö ¾ÊÀ¸¸é, ¿¡·¯¸¦ Ã³¸®ÇÏÁö ¾Ê¾Æ¼­ ¿¹¿Ü°¡ ¹ß»ýÇÕ´Ï´Ù.
-* (¿¹Á¦¿¡¼­ 50, 51À» Áö¿ì¸é ¿¡·¯°¡ ³²)
-* »ó¼Ó°ü°è¿¡ µû¶ó¼­ ÁöÁ¤ÇÏÁö ¾ÊÀ¸¸é »óÀ§ »ó¼Ó °³Ã¼°¡ ÀÌ¸¦ Ã³¸®ÇÏ´Â °æ¿ìµµ ÀÖÁö¸¸,
-* ¿¹¸¦µé¾î, case 2 : length_error´Â catch(logit_error)¿¡¼­ Ã³¸® ÇÔ
-* ÀÌ¸¦ ½Å°æ¾²Áö ¸ø ÇßÀ» ¶§, catch(...)¸¦ ÅëÇØ¼­ ÇØ°á ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-* ´ÜÁ¡ÀÌ¶ó¸é, º¯¼ö¸¦ Ã³¸® ÇÏÁö ¸øÇÑ´Ù´Â °Í
-*/
-
-int func(int c) {
-    switch (c) {
+void func(int input) {
+    switch (input)
+    {
     case 1:
         throw domain_error("domain");
     case 2:
@@ -27,36 +28,54 @@ int func(int c) {
     case 6:
         throw runtime_error("runtime");
     case 7:
+
         throw underflow_error("underflow");
     default:
-        c =  c / 0;
+        cout << "100 / input = " << (100 / input) << endl;
         break;
     }
-    return 0;
 }
 
-int main() {
-	try {
-		int i = 10;
-		printf(" > %d : ", i);
-		func(i);
-	}
-	catch (domain_error e) {
-		cout << "(D) " << e.what() << endl;
-	}
-	catch (logic_error e) {
-		cout << "(L) " << e.what() << endl;
-	}
-	catch (overflow_error e) {
-		cout << "(OV) " << e.what() << endl;
-	}
-	catch (underflow_error e) {
-		cout << "(UD) " << e.what() << endl;
-	}
-	catch (range_error e) {
-		cout << "(R) " << e.what() << endl;
-	}
-	catch (...) {
-		cout << "Default Error" << endl;
-	}
+
+
+
+int main()
+
+
+{
+    try
+    {
+        int input;
+        cout << "input :";
+        scanf_s("%d", &input);
+        func(input);
+        cout << "ì •ìƒ ì¢…ë£Œ" << endl;
+    }
+    catch (domain_error e)
+    {
+        cout << "(D) " << e.what() << endl;
+    }
+    catch (logic_error e)
+    {
+        cout << "(L) " << e.what() << endl;
+    }
+    catch (overflow_error e)
+    {
+        cout << "(OV) " << e.what() << endl;
+    }
+    catch (underflow_error e)
+    {
+        cout << "(UD) " << e.what() << endl;
+    }
+    catch (range_error e)
+    {
+        cout << "(R) " << e.what() << endl;
+    }
+    catch (exception e) {
+        cout << "(exception) " << e.what() << endl;
+    }
+    catch (...)
+    {
+        cout << "Default Error" << endl;
+    }
 }

@@ -1,24 +1,26 @@
+/* noexcept 키워드
+ * 해당 키워드를 이용하면, 해당 함수안에서는 throw하지 않는다고 명시하는 것입니다.
+ *
+ * noexcept존에서 throw가 발생 하면 에러가 납니다.
+ */
+
 #include <iostream>
 using namespace std;
 
-/* noexcept Ű����
-* �ش� Ű���带 �̿��ϸ�, �ش� �Լ��ȿ����� throw���� �ʴ´ٰ� �����ϴ� ���Դϴ�.
-*
-* noexcept������ throw�� �ϸ� ������ ���ϴ�.
-*/
-
-void kimchi()  {
-    //throw __func__;
-}
-
-void bab() noexcept{
-    throw __func__;
+void foo(int i) noexcept {
+    if (i == 0)
+        try {
+        throw __func__;
+    }
+    catch (const char* e) {
+    }
+    else
+        cout << "No Error" << endl;
 }
 
 int main() {
     try {
-        kimchi();
-        bab();
+        foo(0);
     }
     catch (const char* x) {
         cout << "Error : " << x << endl;

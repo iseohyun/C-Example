@@ -1,9 +1,8 @@
-#include <iostream>
-using namespace std;
-
-// * template *
 // 2개 이상의 template를 지정하는 방법입니다.
 // 
+
+#include <iostream>
+using namespace std;
 
 template <typename T, typename U> 
 void func(T& a, U& b) {

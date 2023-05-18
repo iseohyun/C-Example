@@ -1,13 +1,22 @@
+/*
+ * new Cast
+ *
+ *  const_cast : const í•œì •ìë¥¼ ì¶”ê°€í•˜ê±°ë‚˜ ì œê±°í•˜ëŠ”ë° ì‚¬ìš©ë©ë‹ˆë‹¤.
+ *
+ *  static_cast : ë‹¤ë¥¸ íƒ€ì…ìœ¼ë¡œì˜ ëª…ì‹œì ì¸ ë³€í™˜ì— ì‚¬ìš©ë©ë‹ˆë‹¤.
+ *
+ *  dynamic_cast : ìƒì† ê³„ì¸µ êµ¬ì¡°ì—ì„œì˜ ë‹¤ìš´ìºìŠ¤íŒ…ê³¼ ê°€ìƒ í•¨ìˆ˜ë¥¼ í†µí•œ ì—…ìºìŠ¤íŒ…ì— ì‚¬ìš©ë©ë‹ˆë‹¤.
+ *   ë”°ë¼ì„œ, upcastì˜ ê²½ìš° ì‹¤í–‰ì´ ë˜ì§€ ì•Šë„ë¡ ë°©ì–´í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ *   ë‹¨, castì— ì˜¤ë²„í•´ë“œê°€ ë°œìƒí•˜ì—¬, ì†ë„ê°€ ì €í•˜ ë  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ *
+ *  reinterpret_cast : íƒ€ì…ê°„ì˜ í¬ì¸í„°ë‚˜ ì°¸ì¡°ìë¥¼ ì¬í•´ì„í•©ë‹ˆë‹¤.
+ *   ì•ˆì „í•˜ì§€ ì•Šì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ *   í¬ê¸°ì™€ ë©”ëª¨ë¦¬ ë ˆì´ì•„ì›ƒì´ í˜¸í™˜ ê°€ëŠ¥í•œ ê²½ìš°ì—ë§Œ ì‚¬ìš©í•©ë‹ˆë‹¤.
+ *
+ */
+
 #include <iostream>
 using namespace std;
-
-// * new Cast *
-// const_cast : const¸¦ ÀÏ½ÃÀûÀ¸·Î ¹«·ÂÈ­½ÃÅµ´Ï´Ù.
-// static_cast : ±âº»ÀÇ (typecast)¿Í ºñ½ÁÇÑ ¿ªÇÒÀ» ÇÕ´Ï´Ù.
-// dynamic_cast : È®Àå°³³äÀÇ cast´Â ¾ø´Â ±â´ÉÀ» ¿äÃ»ÇÏ°Ô µÇ´Â °æ¿ì°¡ ÀÖ½À´Ï´Ù.(upcast)
-//		µû¶ó¼­, upcastÀÇ °æ¿ì ½ÇÇàÀÌ µÇÁö ¾Êµµ·Ï ¹æ¾îÇÒ ¼ö ÀÖ½À´Ï´Ù.
-//		´Ü, cast¿¡ ¿À¹öÇØµå°¡ ¹ß»ıÇÏ¿©, ¼Óµµ°¡ ÀúÇÏ µÉ ¼ö ÀÖ½À´Ï´Ù.
-//-> const_cast, static_cast, dynamic_cast, reinterpret_cast
 
 class A {
 	int IDa;
@@ -24,17 +33,18 @@ public:
 
 int main()
 {
-	// const_cast
+	/* const_cast */
 	cout << " >> const cast" << endl;
 	int i;
 	const int* p = &i;
 	int* q = const_cast<int*> (p);
-	//int* q = p;	// const int *Çü½ÄÀº int *¸¦ ÃÊ±âÈ­ ÇÒ ¼ö ¾øÀ½.
-	//*p = 10;		// const´Â ¼öÁ¤ ÇÒ ¼ö ¾øÀ½.
+	//int* q = p;	// const int *í˜•ì‹ì€ int *ë¥¼ ì´ˆê¸°í™” í•  ìˆ˜ ì—†ìŒ.
+	//*p = 10;		// constëŠ” ìˆ˜ì • í•  ìˆ˜ ì—†ìŒ.
 	*q = 10;
 	cout << i << endl;
 
-	// static_cast
+
+	/* static_cast */
 	cout << " >> static cast" << endl;
 	cout << static_cast<float>(i) / 3 << endl;
 
@@ -47,7 +57,9 @@ int main()
 	B* pb2 = static_cast<B*>(pa2);
 	pb2->show();
 
-	// dynamic_cast
+
+	/* dynamic_cast */
+	cout << " >> dynamic_cast" << endl;
 	B* pb3 = new B(10, 100);
 	A* pa3 = dynamic_cast<A*>(pa);	// downcast (B->A)
 	pb->show();
@@ -56,4 +68,16 @@ int main()
 	A* pa4 = new A(20);
 	//B* pb2 = dynamic_cast<B*>(pa2); // upcast(A->B), Error
 	pb2->show();
+
+
+	/* reinterpret_cast */
+	cout << " >> reinterpret_cast" << endl;
+	int intValue = 10;
+	double doubleValue;
+
+	// reinterpret_castë¥¼ ì‚¬ìš©í•˜ì—¬ ì •ìˆ˜ë¥¼ ë¶€ë™ ì†Œìˆ˜ì  ìˆ«ìë¡œ ë³€í™˜í•©ë‹ˆë‹¤.
+	doubleValue = reinterpret_cast<double&>(intValue);
+
+	std::cout << "intValue: " << intValue << std::endl;
+	std::cout << "doubleValue: " << doubleValue << std::endl;
 }

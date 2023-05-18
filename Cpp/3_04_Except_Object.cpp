@@ -1,13 +1,16 @@
+/*
+* exceptionê°œì²´
+* exceptionì„ ìƒì†ë°›ì•„ êµ¬í˜„ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+*
+* Childì™€ Parentì˜ catchìˆœì„œë¥¼ ë°”ê¿”ë´…ë‹ˆë‹¤.
+*   warning: exception of type 'Child' will be caught by earlier handler [-Wexceptions]
+*/
+
 #include <exception>
 #include <iostream>
 using namespace std;
 
-/*
-* exception°³Ã¼
-* exceptionÀ» »ó¼Ó¹Ş¾Æ ±¸ÇöÀÌ °¡´ÉÇÕ´Ï´Ù.
-*/
-
-class Parent : public std::exception {
+class Parent : public exception {
 public:
     virtual const char* what() const noexcept override { return "Parent!\n"; }
 };
@@ -30,16 +33,16 @@ int func(int c) {
 int main() {
     for (int i = 1; i <= 2; i++) {
         try {
-            cout << " > ÀÔ·Â : " << i << endl;
+            cout << " > ì…ë ¥ : " << i << endl;
             func(i);
-        }
-        catch (Parent& p) {
-            cout << "Parent Catch!" << endl;
-            cout << p.what();
         }
         catch (Child& c) {
             cout << "Child Catch!" << endl;
             cout << c.what();
+        }
+        catch (Parent& p) {
+            cout << "Parent Catch!" << endl;
+            cout << p.what();
         }
     }
 }

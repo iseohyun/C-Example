@@ -1,3 +1,5 @@
+// 실습과제 4_01, 2번에 대한 답안입니다.
+
 #include <iostream>
 using namespace std;
 
@@ -5,13 +7,16 @@ class Unit {
 public:
 	char lv;
 	int exp = 1;
+
 	Unit(int cls) {
 		this->lv = cls;
 	}
+
 	Unit(int cls, int exp) {
 		this->lv = cls;
 		this->exp = exp;
 	}
+
 	Unit operator+(Unit t) {
 		Unit x('A');
 		if (lv == t.lv) {
@@ -38,7 +43,7 @@ template<typename T> T UnitMerge(T a) {
 	return a + a;
 }
 
-int Test_main()
+int main()
 {
 	Unit A1('A');
 	Unit B1('B');

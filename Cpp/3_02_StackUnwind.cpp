@@ -1,61 +1,67 @@
+/*
+ *  ì˜ˆì™¸ : ìŠ¤íƒí’€ê¸° (stack unwinding)
+ *   ì˜ˆì™¸ê°€ ë°œìƒì´ ë˜ë©´, ì´í›„ì˜ ì½”ë“œë“¤ì´ ì‹¤í–‰ë˜ì§€ ì•Šê³ , ë°”ë¡œ catchë¬¸ìœ¼ë¡œ ì´ë™í•˜ê¸° ë•Œë¬¸ì—,
+ *  í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ë©´ì„œ ìƒì„±ëœ stackì—ì„œ ë¬¸ì œê°€ ë°œìƒí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ë”°ë¼ì„œ, ë”°ë¡œ ë©”ëª¨ë¦¬ ì„¤ì •ì„ í–ˆë‹¤ë©´ ë°˜ë“œì‹œ í•´ì œê°€ ë  ìˆ˜ ìžˆë„ë¡ ì‹ ê²½ì¨ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤.
+ */
+
 #include <iostream>
 #include <stdexcept>
+#include <string>
 using namespace std;
 
-/*
-*  ¿¹¿Ü : ½ºÅÃÇ®±â (stack unwinding)
-*   ¿¹¿Ü°¡ ¹ß»ýÀÌ µÇ¸é, ÀÌÈÄÀÇ ÄÚµåµéÀÌ ½ÇÇàµÇÁö ¾Ê°í, ¹Ù·Î catch¹®À¸·Î ÀÌµ¿ÇÏ±â ¶§¹®¿¡,
-*  ÇÔ¼ö¸¦ È£ÃâÇÏ¸é¼­ »ý¼ºµÈ stack¿¡¼­ ¹®Á¦°¡ ¹ß»ýÇÒ ¼ö ÀÖ½À´Ï´Ù. µû¶ó¼­, µû·Î ¸Þ¸ð¸® ¼³Á¤À» Çß´Ù¸é ¹Ýµå½Ã ÇØÁ¦°¡ µÉ ¼ö ÀÖµµ·Ï ½Å°æ½áÁÖ¾î¾ß ÇÕ´Ï´Ù.
-*/
-
-class Resource {
+class Dummy
+{
 public:
-    Resource(int id) : id_(id) {
-        cout << "¸®¼Ò½º ÇÒ´ç : " << id << endl;
+    string name;
+    Dummy(string name) : name(name)
+    {
+        cout << "  í• ë‹¹ @ " << name << endl;
     }
-    ~Resource() {
-        cout << "¸®¼Ò½º ÇØÁ¦ : " << id_ << endl;
+    Dummy(const Dummy &other) : name(other.name)
+    {
+        cout << "  ë³µì‚¬ë¨ @ " << other.name << endl;
     }
-
-private:
-    int id_;
+    ~Dummy()
+    {
+        cout << "  í•´ì œ @ " << name << endl;
+    }
 };
 
-int func3(bool mode) {
-    Resource r(3);
-    if (mode)
-        throw runtime_error("Exception from 3!\n");
-    return 0;
+void func3(Dummy d)
+{
+    cout << "ì‹œìž‘ : " << __func__ << endl;
+    d.name = __func__;
+    throw runtime_error("throw error!\n");
+    cout << "ì¢…ë£Œ : " << __func__ << endl;
 }
 
-int func2(bool mode) {
-    Resource r(2);
-    func3(mode);
-    return 0;
+void func2(Dummy d)
+{
+    cout << "ì‹œìž‘ : " << __func__ << endl;
+    d.name = __func__;
+    func3(d);
+    cout << "ì¢…ë£Œ : " << __func__ << endl;
 }
 
-int func1(bool mode) {
-    Resource r(1);
-    func2(mode);
-    return 0;
+void func1(Dummy d)
+{
+    cout << "ì‹œìž‘ : " << __func__ << endl;
+    d.name = __func__;
+    func2(d);
+    cout << "ì¢…ë£Œ : " << __func__ << endl;
 }
 
-int main() {
-    // ¿¹¿Ü ¹ß»ý ¾ÈÇÔ.
-    try {
-        func1(false);
+int main()
+{
+    Dummy d("main");
+    try
+    {
+        // func1 > func2 > func3 ì„ í˜¸ì¶œ
+        // ê° í•¨ìˆ˜ì˜ ìž…ìž¥ì‹œ "ì‹œìž‘", í‡´ìž¥ì‹œ "ì¢…ë£Œ"ì¶œë ¥
+        func1(d);
     }
-    catch (exception& e) {
-        cout << "Exception : " << e.what();
-    }
-
-    cout << endl << endl;
-
-    // ¿¹¿Ü ¹ß»ý ÇÔ.
-    try {
-        func1(true);
-    }
-    catch (exception& e) {
+    catch (exception &e)
+    {
         cout << "Exception : " << e.what();
     }
 }
